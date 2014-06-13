@@ -40,7 +40,7 @@ PERCENTAGE=`bc <<< "scale=2; $DONORS/11.11"`
 echo $PERCENTAGE%
 sed -i "s|/\*funds\*/ width: 0%;|/*funds*/ width: $PERCENTAGE%;|" index.html
 
-cp -r ../assets/* ./
+cp -r ../assets/* ../assets/.htaccess ./
 
 ln -s /srv/hidden hidden
 ln -s /srv/stuff stuff
