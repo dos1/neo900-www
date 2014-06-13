@@ -1,0 +1,11 @@
+FileETag Size
+
+ExpiresActive On
+ExpiresDefault A604800
+ExpiresByType text/html A30
+ExpiresByType application/html+xml A30
+ExpiresByType application/rss+xml A600
+ExpiresByType image/jpeg A6048000
+ExpiresByType image/png A6048000
+ExpiresByType text/css A6048000
+

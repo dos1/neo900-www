@@ -1,0 +1,49 @@
+#!/bin/bash
+set -e
+shopt -s nullglob
+
+rm -rf output
+mkdir -p output
+
+FILES=*.html.in
+for f in $FILES
+do
+  echo "Processing ${f%.*}..."
+  cat header.tpl $f footer.tpl > output/${f%.*}
+done
+
+echo "---NEWS---"
+cd news
+NEWS=*.in
+for f in $NEWS
+do
+  echo "Processing news-${f%.*}..."
+  cat ../header.tpl header.tpl $f footer.tpl ../footer.tpl > ../output/news-${f%.*}
+done
+cd ../output
+
+echo "---progress bar---"
+#DATA="`wget http://shop.goldelico.com/campaign/9603.php -O -`"
+#FUNDS=`wget http://shop.goldelico.com/campaign/9603.php -O - | head -n 1 | cut -d: -f2 | cut -d. -f1`
+#DONORS=`wget http://shop.goldelico.com/campaign/9603.php -O - | head -n 5 | tail -n 1 | cut -d: -f2`
+#DONORSBIG=`wget http://shop.goldelico.com/campaign/9603.php -O - | head -n 6 | tail -n 1 | cut -d: -f2`
+#DONORS=$(($DONORS+$DONORSBIG))
+
+FUNDS="76 045"
+DONORS="365"
+
+echo $FUNDS € / $DONORS
+sed -i "s|<!--FUNDS--><!--/FUNDS-->|<!--FUNDS-->$FUNDS €<!--/FUNDS-->|" index.html
+sed -i "s|<!--DONORS--><!--/DONORS-->|<!--DONORS-->$DONORS<!--/DONORS-->|" index.html
+sed -i "s|aria-valuenow=\"0\"|aria-valuenow=\"$DONORS\"|" index.html
+PERCENTAGE=`bc <<< "scale=2; $DONORS/11.11"`
+echo $PERCENTAGE%
+sed -i "s|/\*funds\*/ width: 0%;|/*funds*/ width: $PERCENTAGE%;|" index.html
+
+cp -r ../assets/* ./
+
+ln -s /srv/hidden hidden
+ln -s /srv/stuff stuff
+ln -s /srv/photos photos
+
+echo "Done!"

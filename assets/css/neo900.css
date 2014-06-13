@@ -1,0 +1,688 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+html { background-color: rgb(245, 245, 245); }
+body { background-color: white; }
+
+body, h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -100px;
+  /* Pad bottom by footer height */
+  padding: 0px 0 100px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  min-height: 60px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.jumbotron {
+  background-color: transparent;
+}
+.stripe {
+   padding: 50px;
+   position: relative;
+}
+.stripe > div {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.stripe > .credit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.7em;
+  padding: 0 10px;
+  color: white;
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+}
+.container {
+  width: auto;
+  max-width: 1200px;
+  padding: 10px 15px;
+}
+.container .credit {
+  margin: 20px 0;
+}
+.popover {
+   font-size: 0.7em;
+   color: rgb(51, 51, 51);
+   text-shadow: none;
+}
+
+.openphoenux {
+  background-image: url('http://static.neo900.org/openphoenux.png');
+  background-size: auto 100%;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+.featurette.row {
+  padding: 25px 0;
+}
+
+h1 {
+  text-shadow: 0px 0px 20px white, 0px 0px 50px white;
+}
+
+.navbar-inverse {
+  background-color: #2b2b2b;
+}
+
+.navbar-inverse .navbar-brand {
+  background-color: rgb(8, 8, 8);
+}
+
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-nav > li > a:hover {
+  background-color: rgb(30,30,30);
+}
+
+.btn-primary {
+  background-color: rgb(217, 103, 23);
+  border: none;
+  box-shadow: 2px 2px 2px -1px rgba(0,0,0,0.25), 0px 23px 4px 0px rgba(255,255,255,0.1) inset, 0px 0px 10px 5px rgba(217, 23, 23, 0.1) inset; 
+  transition: 0.25s background-color, 0.25s box-shadow;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  outline: none;
+  background-color: rgb(217, 23, 23);
+  box-shadow: 2px 2px 2px -1px rgba(0,0,0,0.25), 0px 23px 4px 0px rgba(255,255,255,0.15) inset, 0px 0px 10px 5px rgba(217, 103, 23, 0.7) inset;
+  transition: 0.5s background-color, 0.5s box-shadow;
+}
+
+.btn-primary:active {
+  background-color: rgb(217, 23, 23);
+  box-shadow: 2px 2px 2px -1px rgba(0,0,0,0.25), 0px 23px 4px 0px rgba(255,255,255,0.1) inset, 0px 0px 10px 5px rgba(217, 103, 23, 0.8) inset, 0px 4px 5px 3px rgba(0,0,0,0.2) inset;
+  transition: none;
+}
+
+.btn-default {
+  border-color: rgb(217, 103, 23);
+  color: rgb(217, 103, 23);
+  background-color: rgb(250,250,250);
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active {
+  border-color: rgb(217, 23, 23);
+  color: rgb(217, 23, 23);
+  background-color: white;
+}
+
+.row {
+  padding: 50px 0px;
+}
+
+#main {
+  margin-bottom: 0px;
+}
+
+.text-small {
+  font-size: 60%;
+}
+.btn-big {
+  font-size: 140%;
+}
+
+@media (max-width: 700px) {
+  .openphoenux {
+    background-image: none;
+  }
+}
+
+strong[title] {
+  border-bottom: 1px dashed #ddd;
+  cursor: help;
+}
+
+
+#contact {
+  display: none;
+  margin-top: 10px;
+}
+.neo900 {
+  font-weight: bold;
+}
+.modal-footer {
+  margin-top: 0 !important;
+}
+.news-title {
+  display: inline-block;
+}
+.news-date {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#main {
+   background-color: white;
+   background: -moz-linear-gradient(left, #eeeeee 0%, #ffffff 25%, #ffffff 75%, #eeeeee 100%); /* FF3.6+ */
+   background: -webkit-gradient(linear, left top, right top, color-stop(0%,#eeeeee), color-stop(25%,#ffffff), color-stop(75%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+   background: -webkit-linear-gradient(left, #eeeeee 0%,#ffffff 25%,#ffffff 75%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+   background: -o-linear-gradient(left, #eeeeee 0%,#ffffff 25%,#ffffff 75%,#eeeeee 100%); /* Opera 11.10+ */
+   background: -ms-linear-gradient(left, #eeeeee 0%,#ffffff 25%,#ffffff 75%,#eeeeee 100%); /* IE10+ */
+   background: linear-gradient(to right, #eeeeee 0%,#ffffff 25%,#ffffff 75%,#eeeeee 100%); /* W3C */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=1 ); /* IE6-9 */
+   box-shadow: 0px 0px 15px #ddd;
+}
+
+#cogIsionFFbtnwrapp, #cogIsionFFbtnwrapp *, #cogIsionFFbtn, #cogIsionFFbtn *, #cogIsionFFtooltip, #cogIsionFFtooltip *, #cogIsionFFwrap, #cogIsionFFwrap *, #cogIsionFFwrap a:hover, #cogIsionFFwrap a:visited, #cogIsionFFwrap a:active {
+-moz-box-sizing: content-box !important;
+-ms-box-sizing: content-box !important;
+-webkit-box-sizing: content-box !important;
+-o-box-sizing: content-box !important;
+box-sizing: content-box !important;
+}
+
+.navbar, .navbar-header, .navbar-collapse {
+  -moz-transition: 0.25s background-color, 0.25s border-color;
+  -webkit-transition: 0.25s background-color, 0.25s border-color;
+  -ms-transition: 0.25s background-color, 0.25s border-color;
+  transition: 0.25s background-color, 0.25s border-color;
+  overflow: hidden;
+}
+.navbar.affix {
+  position: fixed !important;
+  top: 0px;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  background-color: rgba(248, 248, 248, 0.95); 
+  background: -moz-linear-gradient(left, #eeeeee 0%, #ffffff 25%, #ffffff 75%, #eeeeee 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#eeeeee), color-stop(25%,#ffffff), color-stop(75%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #eeeeee 0%,#ffffff 25%,#ffffff 75%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #eeeeee 0%,#ffffff 25%,#ffffff 75%,#eeeeee 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #eeeeee 0%,#ffffff 25%,#ffffff 75%,#eeeeee 100%); /* IE10+ */
+  background: linear-gradient(to right, #eeeeee 0%,#ffffff 25%,#ffffff 75%,#eeeeee 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=1 ); /* IE6-9 */
+  opacity: 0.95;
+}
+h2.h1 { text-align: center; }
+/*transform: scale(0.75); -webkit-transform: scale(0.75); -moz-transform: scale(0.75);}*/
+.navbar.affix-top {
+  border-color: transparent;
+}
+.navbar .container {
+ padding: 0; 
+}
+.pcb {
+  background-image: url('http://static.neo900.org/pcb.jpg');
+   background-attachment: fixed;
+   background-position: top center;
+   color: white;
+}
+.n900side {
+  background-image: url('http://static.neo900.org/n900side.jpg');
+  background-position: right top;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+.n900side .container {
+   /*background-color: rgba(255,255,255,0.75); */
+}
+.sunrise {
+  background-image: url('http://static.neo900.org/sunrise.jpg');
+  background-attachment: fixed;
+  background-position: top center;
+  color: white;
+}
+.sunrise .container {
+  text-shadow: 0px 0px 40px black, 1px 1px 0px rgba(0,0,0,0.4);
+}
+.pcb .row {
+   padding: 40px 20px;
+   text-shadow: 0px 0px 20px black, 1px 1px 0px rgba(0,0,0,0.4);
+}
+.pcb h2 {
+  padding: 30px;
+  margin: 0 -15px;
+  text-shadow: 0px 0px 40px black, 1px 1px 0px rgba(0,0,0,0.4);
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover {
+   background-color: transparent;
+   color: red;
+}
+.navbar-default .navbar-nav > .active > a:focus {
+   color: red; 
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > .active > a:hover {
+  box-shadow: 0px 0px 10px #ddd inset;
+}
+#faq h2, #faq p {
+-ms-transition: 2s color;
+-webkit-transition: 2s color;
+-moz-transition: 2s color;
+-o-transition: 2s color;
+transition: 2s color;
+margin-top: -70px;
+padding-top: 70px;
+}
+#faq .target, #faq .target + p {
+color: red;
+-ms-transition: 0.2s color;
+-webkit-transition: 0.2s color;
+-moz-transition: 0.2s color;
+-o-transition: 0.2s color;
+transition: 0.2s color;
+}
+#faq .target, #faq :target {
+font-weight: bold;
+}
+.faq-list.affix {
+  top: 60px;
+  width: 270px;
+}
+.faq-sidebar {
+  min-height: 630px; 
+}
+.small-left {
+  float: left;
+}
+.small-right {
+  float: right;
+}
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+.sunrise .btn {
+  position: relative; 
+}
+.sunrise .btn:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: inline-block;
+  top: 0px;
+  left: 0px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 1200px) {
+  .faq-sidebar, .faq-list {
+    display: none;
+  }
+  .small-left, .small-right {
+     float: none; 
+  }
+}
+
+.progress {
+   height: 44px;
+}
+.progress-bar {
+   font-size: 1em;
+}
+.legend {
+  position: relative; 
+  margin-top: -15px;
+  height: 2em;
+}
+.legend p {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+#features2 .row {
+ padding: 10px 0;
+}
+.thumbnail {
+  font-size: 0.7em;
+  min-height: 14em;
+  display: inline-block;
+  margin: 0;
+  padding: 30px;
+  background-color: rgba(255,255,255,0.95);
+}
+.thumbnail h3 {
+  text-align: center;
+  margin-top: 0;
+}
+.op {
+  background-image: url('http://static.neo900.org/op.png');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+  background-size: auto 60%;
+}
+.btn-progress {
+  position: relative; 
+  overflow: hidden;
+}
+.btn-progressbar {
+  height: 3px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(255,64,0,0.5);
+  box-shadow: 2px 2px 10px 2px white;
+}
+.pcb a {
+  color: rgb(166, 239, 252);
+}
+.pcb a:hover {
+  color: rgba(166, 239, 252, 0.8); 
+}
+.pony-controls {
+  position: fixed;
+  bottom: 15px;
+  left: 10px;
+  border: 5px solid rgba(100, 100, 100, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px 5px 5px 5px;
+  z-index: 9999999;
+}
+
+.phases {
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+  margin: 20px 0;
+}
+.phase {
+  width: 16.733333333%;
+  min-width: 180px;
+  display: block;
+  float: left;
+  border: 1px solid white;
+  margin: 0;
+  margin-left: -1px;
+  padding: 0 15px 0;
+  height: 100%;
+  vertical-align: middle;
+  background-color: rgba(255,255,255,0.2);
+  opacity: 0.7;
+  position: relative;
+}
+/*div.phase:hover {
+  opacity: 0.8;
+  z-index: 10;
+}*/
+.phase.one {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-left: 0;
+}
+.phase.last {
+  border: 1px solid white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.phase.completed {
+  background-color:rgb(217, 83, 79);
+  opacity: 1;
+  position:relative;
+}
+.phase.current {
+  background-color:rgb(240, 173, 78); 
+  box-shadow: 0px 0px 25px rgba(255,255,255,0.5);
+  font-weight: bold;
+  margin-top: -0.25em;
+  margin-bottom: -0.25em;
+  opacity: 1;
+}
+.phase.completed.done {
+  color: white;
+  text-decoration: none;
+  box-shadow: 0px 0px 10px rgba(255,255,255,0.5);
+}
+.phase.completed.done:hover {
+  box-shadow: 0px 0px 25px rgba(255,255,255,0.75);
+}
+.phase.completed.done:active {
+  opacity: 0.9;
+}
+.phase.completed:before {
+  text-shadow: none;
+  position: absolute;
+  bottom: -0.7em;
+  right: -0.1em;
+  font-size:5em;
+  content: "✓";
+  z-index: 0;
+  color: rgba(255,255,255,0.5);
+  pointer-events: none;
+}
+.phase.completed.done:before {
+  /*color: white;
+  text-shadow: 0px 0px 30px white;*/
+  
+}
+.phase:after {
+  content: "";
+  right: -17px;
+  top: 50%;
+  margin-top: -10px;
+  width: 0;
+  height: 0;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -o-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 10px solid transparent;
+  display: block;
+  position: absolute;
+  border-left: 10px solid white;
+  z-index: 5;
+}
+.phase.last:after {
+  display: none;
+}
+.phase.current span {
+  font-size: 1.4em;
+}
+.phase.current p {
+  font-size: 0.8em;
+}
+.phase span {
+  font-size: 1.25em;
+  display: block;
+  margin-top: -0.1em;
+}
+.phase p {
+  margin-top: -0.5em;
+  font-size: 0.65em;
+}
+@media (max-width: 1220px) {
+  /*.phases {
+    box-shadow: none;
+  }*/
+  .phase {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: -1px;
+  }
+  .phase.one {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+  .phase.last {
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+  }
+  .phase.current {
+    margin-top: -1px;
+    margin-bottom: 0px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+  }
+  .phase:after {
+    content: "";
+    top: auto;
+    bottom: -17px;
+    left: 50%;
+    margin-left: -10px;
+    width: 0;
+    height: 0;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    box-sizing: content-box;
+    border: 10px solid transparent;
+    display: block;
+    position: absolute;
+    border-top: 10px solid white;
+    z-index: 5;
+  }
+  .phase:not(.current) span, .phase:not(.current) p {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .phase.completed:before {
+    right: 0;
+    font-size: 3.75em;
+  }
+  .pcb {
+    background-attachment: scroll;
+  }
+  .sunrise {
+    background-attachment: scroll;
+  }
+}
+@media (max-width: 995px) {
+  #features2 .col-sm-6.col-md-4 {
+    width: 100%;
+    margin: 10px 0;
+  }
+  #features2 .row {
+    padding: 0;
+  }
+  img, .img-responsive {
+    max-width: 300px;
+    margin: 0px auto 20px;
+  }
+}
+#faq .nav > li > a {
+  padding: 2px;
+}
+
+a.link-inverted {
+  color: white;
+  text-decoration: underline;
+}
+
+.timeline {
+  width: 100%;
+  margin-bottom: 10em;
+  margin-top: 100px;
+  border-top: 3px dashed #D91717;
+  position: relative;
+}
+.timeline .left, .timeline .right {
+  position: absolute;
+  top: -5px;
+  height: 8px;
+  background-color: white;  
+  border: 2px solid #D96717;
+}
+.timeline .left {
+  left: 0;
+}
+.timeline .right {
+  right: 0;
+}
+.timeline .past {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  height: 8px;
+  background-color: #D96717;
+  box-shadow: 5px 0px 2px -2px white;
+}
+.timeline .point {
+  top: 18px;
+  position: absolute;
+  width: 100px;
+  margin-left: -50px;
+  text-align: center;
+}
+.timeline .point.top {
+  top: auto;
+  bottom: 18px;
+}
+.timeline .point:before {
+  content: "";
+  border: 5px solid #D91717;
+  border-radius: 5px;
+  height: 25px;
+  position: absolute;
+  margin-left: 50px;
+  top: -26px;
+  left: -2px;
+}
+.timeline .point.top:before {
+  top: auto;
+  bottom: -26px;
+}
+.timeline .point span {
+  display: block;
+  font-style: italic;
+}
+.timeline .point:after {
+  content: "";
+  border: 5px solid black;
+  border-radius: 5px;
+  left: -2px;
+  opacity: 0.15;
+  height: 20px;
+  position: absolute;
+  margin-left: 50px;
+
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  top: -26px;
+
+}
+.timeline .point.top:after {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  top: auto;
+  bottom: -26px;
+  
+}
+.followups {
+  padding: 10px;
+  background-color: rgba(0,0,0,0.02);
+  margin-bottom: 10px;
+}

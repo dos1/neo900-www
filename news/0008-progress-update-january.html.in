@@ -1,0 +1,40 @@
+<h2 class="news-title">Neo900 Progress Update - January</h2>
+<p class="text-muted news-date">Jan 15, 2014</p>
+
+<p class="lead">With the biggest obstacles now overcome, we are again gaining speed to reach the next goal.</p>
+
+<p>A long time has already passed since the last update. Since holidays, the greatest nightmare of the project to date - <a href="http://projects.goldelico.com/p/neo900/issues/536/">the 500246471 Molex display connector</a> - has been finally dealt with, giving us a few possible sources for the component. We would like to say thank you to all people who helped with this difficult subject, once again proving the awesomeness of this community!</p>
+
+<p>The first tests made with 40-pin variant of the connector (we need 64-pin one) assured us that our identification is correct and we may really buy it without the risk of component mismatch.</p>
+
+<p style="margin: 20px 0">
+<a href="http://maemo.cloud-7.de/Neo900/media/pic+vid/DSC01828.jpeg" rel="lightbox" data-lightbox="p1">
+<img src="http://maemo.cloud-7.de/Neo900/media/pic+vid/DSC01828.jpeg" width="200" />
+</a>
+<a href="http://maemo.cloud-7.de/Neo900/media/pic+vid/DSC01830.jpeg" rel="lightbox" data-lightbox="p1">
+<img src="http://maemo.cloud-7.de/Neo900/media/pic+vid/DSC01830.jpeg" width="200" />
+</a>
+<a href="http://maemo.cloud-7.de/Neo900/media/pic+vid/DSC01831.jpeg" rel="lightbox" data-lightbox="p1">
+<img src="http://maemo.cloud-7.de/Neo900/media/pic+vid/DSC01831.jpeg" width="200" />
+</a>
+<a href="http://maemo.cloud-7.de/Neo900/media/pic+vid/DSC01832.jpeg" rel="lightbox" data-lightbox="p1">
+<img src="http://maemo.cloud-7.de/Neo900/media/pic+vid/DSC01832.jpeg" width="200" />
+</a>
+<a href="http://maemo.cloud-7.de/Neo900/media/pic+vid/DSC01833.jpeg" rel="lightbox" data-lightbox="p1">
+<img src="http://maemo.cloud-7.de/Neo900/media/pic+vid/DSC01833.jpeg" width="200" />
+</a>
+</p>
+
+
+<p>We have ordered a first quantity of those connectors based on our current <a href="http://neo900.org/#donate">"preorder" counter</a>, experience, guessing and calculations. However, when the cost per component goes higher we won't be able to guess anymore. At that moment - so it happens before regular orders open up - the amount of orderable devices will be frozen, determined by the number of preorders we received. Thankfully this is something we managed to avoid this time.</p>
+
+<p>We have also received next PCBs with most of <a href="http://projects.goldelico.com/p/neo900/issues/518/">the issues found on earlier ones</a> already fixed, making further progress in mechanical evaluation of our board in connection to the original N900 case.</p>
+
+<p>On the other side, we started to <a href="http://projects.goldelico.com/p/neo900/issues/546/">collect possible options for WiFi/BT/FM/NFC module</a> to be used in Neo900. We are also looking for the feedback from community in order to find out which module would be the most appreciated by our users. Don't hesitate to <a href="http://talk.maemo.org/showthread.php?p=1404178#post1404178">share your thoughts</a> on <a href="http://talk.maemo.org/forumdisplay.php?f=57">our new subforum</a>!</p>
+
+<p>While dealing with big issues, small but fancy details are not forgotten - for instance, we plan to bring <a href="http://projects.goldelico.com/p/neo900/issues/541/">RGB keyboard illumination</a> to Neo900 using three LP5523 controllers (which by the way is a <a href="https://pavelmachek.livejournal.com/120188.html">pretty hackable beast</a>), enabling unusual expression abilities for the light under the keys. We also keep evaluating new possibilities, like <a href="http://talk.maemo.org/showthread.php?p=1405134#post1405134">decent video output</a> (VGA/HDMI/SlimPort), <a href="http://talk.maemo.org/showthread.php?p=1405843#post1405843">DVB-T tuner and SDR receiver, pager</a> etc. Obviously we cannot promise any of those functionalities right now, but we want to keep an eye on what's possible and feasible for the project, so if some highly desirable feature can make it into the device without adding big overhead for time of delivery and/or costs, we will be happy to integrate it into your devices, thus produce more of them for even better price while having more features. Your insight is welcome and highly appreciated in <a href="http://talk.maemo.org/showthread.php?t=91142">our forum thread</a>!</p>
+
+<p><a href="https://shop.goldelico.com/wiki.php?page=Neo900" class="btn btn-primary btn-lg" style="margin: 20px 0;">Claim your device now!</a></p>
+
+<p style="float: right"><a href="news-0009-progress-update-march">Neo900 Progress Update - March &raquo;</a></p>
+<p><a href="news-0007-happy-holidays">&laquo; Happy Holidays</a></p>
