@@ -2,14 +2,12 @@
     <div id="footer">
       <div class="container">
         <p class="text-muted credit">
-        <strong>CC-BY-SA 3.0</strong> Neo900. <a href="/impressum">Impressum</a>. Project by <a href="http://handelsregister-online.net/neueintragung.cfm?cn=3966641" target="_blank">Neo900 UG</a> in cooperation with 
-<a target="_blank" 
-href="http://goldelico.com/">Golden Delicious Computers GmbH &amp; Co. KG</a>.<br/>
+        <strong>CC-BY-SA 3.0</strong> Neo900. <a href="/impressum">Impressum</a>. Project by <a href="http://handelsregister-online.net/neueintragung.cfm?cn=3966641" target="_blank">Neo900 UG</a> in cooperation with <a target="_blank" href="http://goldelico.com/">Golden Delicious Computers GmbH &amp; Co. KG</a>.<br/>
         Site created by <a target="_blank"  href="http://dosowisko.net/">Sebastian Krzyszkowiak</a>. All trademarks are the property of their respective owners.</p>
       </div>
     </div> <!-- /footer -->
 
-    
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -21,7 +19,7 @@ href="http://goldelico.com/">Golden Delicious Computers GmbH &amp; Co. KG</a>.<b
     <script src="http://neo900.org/js/lightbox-2.6.min.js"></script>
     <script>
      $(function() {
-       
+
        if ($('#fund-amount').length) {
          function updateProgress() {
            $.get('campaign-info.txt?timestamp='+new Date().getTime(), function(d) {
@@ -31,12 +29,12 @@ href="http://goldelico.com/">Golden Delicious Computers GmbH &amp; Co. KG</a>.<b
              var valMore = parseInt(d[5].split(':')[1]);
              var val = parseInt(d[4].split(':')[1]);
              var valLess = parseInt(d[2].split(':')[1])-val-valMore;
-            
+
              $('.progress-bar-over100').width(val/11.11+"%").attr('aria-valuenow',val);
              $('.progress-bar-over1500').width(valMore/11.11+"%").attr('aria-valuenow',val);
              $('.progress-bar-less').width(valLess/11.11+"%").attr('aria-valuenow',val);
              $('.btn-progressbar').width(val/11.11+"%");
-             
+
              if ((val+valMore) >= 1000) {
                $('.progress-bar-over100').addClass('progress-bar-danger');
                //$('#ourgoal').text('The campaign has reached its main goal! Thank you!');
@@ -51,7 +49,7 @@ href="http://goldelico.com/">Golden Delicious Computers GmbH &amp; Co. KG</a>.<b
          updateProgress();
          setInterval(updateProgress, 300000);
        }
-       
+
        var $form = $('#subscription');
        var submited = false;
        $form.on('submit', function(e) {
@@ -67,8 +65,7 @@ href="http://goldelico.com/">Golden Delicious Computers GmbH &amp; Co. KG</a>.<b
          e.preventDefault();
          return false;
        });
-       
-       
+
        $('.btn-subscribe').on('mousedown',function(e) {
          $(this).attr('href','#subscribe');
        }).on('click', function(e) {
@@ -77,11 +74,11 @@ href="http://goldelico.com/">Golden Delicious Computers GmbH &amp; Co. KG</a>.<b
          $form.find('.modal-body').show();
          submited = false;
        });
-       
+
        if (window.location.hash === '#subscribe') {
          $('.btn-subscribe').attr('href','#subscribe').trigger('click').attr('href','/subscribe');
        }
-       
+
        $('.faq-list').affix({
          offset: {
            top: function () {
@@ -98,33 +95,29 @@ href="http://goldelico.com/">Golden Delicious Computers GmbH &amp; Co. KG</a>.<b
          return false;
        });
        $.stellar({responsive: true, parallaxElements: false, horizontalScrolling: false, positionProperty: 'transform', hideDistantElements: false});
-       
+
        if ($('.faq-list').height() > ($(window).innerHeight() - 140)) {
          $(window).off('.affix');
          $('.faq-list').removeClass('affix');
        }
      });
-</script>
-<!-- Piwik -->
-<script type="text/javascript"> 
-var _paq = _paq || [];
-_paq.push(['trackPageView']);
-_paq.push(['enableLinkTracking']);
-(function() {
-  var u=(("https:" == document.location.protocol) ? "https" : "http") + "://dosowisko.net/analytics/piwik//";
-  _paq.push(['setTrackerUrl', u+'piwik.php']);
-  _paq.push(['setSiteId', 1]);
-  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-  g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-})();
+    </script>
 
-</script>
-<noscript><p><img src="http://dosowisko.net/analytics/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+    <!-- Piwik -->
+    <script type="text/javascript"> 
+        var _paq = _paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://dosowisko.net/analytics/piwik//";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 1]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+        g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <noscript><p><img src="http://dosowisko.net/analytics/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
 <!-- End Piwik Code -->
-    <!--<script src="http://usabilitytools.com/clicktracker/script/61931/tracker.js" type="text/javascript" defer="defer"></script>-->
-
-    <!-- this <script src="https://usabilitytools.com/clicktracker/script/68151/tracker.js" type="text/javascript" defer="defer" async="async"></script> -->
 
   </body>
 </html>
-
