@@ -218,77 +218,10 @@ The device is currently <strong><a href="#news" class="smooth">in development</a
     <div class="jumbotron stripe sunrise" id="donate" data-stellar-background-ratio="0.5">
     <a target="_blank"  class="credit" href="https://secure.flickr.com/photos/ptrktn/4233596678/" data-toggle="popover" data-trigger="hover" data-placement="left" data-content='"The First Sunrise of 2010" licensed on CC-BY 2.0'>by ptrktn</a>
     <div class="container">
-<h2 class="h1">Project budget</h2>
-
-
-<p style="margin: 40px 0 10px">Thanks to the amazing help from the community, we've already reached our two main goals - the <strong>25 000 €</strong> needed to make the design ready for production and <strong>at least 200 customers</strong> who want to buy a device. Thank you!</p>
-<div class="center"><div class="phases">
-<a href="news-0005-phase-i-results-ohsw-showcase" class="phase one completed done" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Thanks to reaching 5 000 EUR we expect that we can do the schematics, component identification and initial mechanical PCB design."><span>Phase 1</span><p>5 000 €</p></a>
-<div class="phase two completed" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Thanks to reaching 15 000 EUR we expect that we can build ~5 prototypes with basic functionality."><span>Phase 2</span><p>15 000 €</p></div>
-<div class="phase three completed" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Thanks to reaching our goal, 25&nbsp;000&nbsp;EUR, we expect that we can build around 15 prototypes, test, fix bugs detected with them and make the design production ready."><span>Phase 3</span><p>25 000 €</p></div>
-<div class="phase four completed"  data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="The milestone of 200 devices is what we are using in our price estimations and what allows us to safely assume feasibility of mass production."><span>Phase 4</span><p>200 devices</p></div>
-<div class="current phase five" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Reaching 1&nbsp;000 (or more) would allow us to buy the components earlier and at better prices, shortening the time till production, dropping the cost per device and making sourcing of hard to get components (like 1GB RAM or display connector) much easier."><span>Phase 5</span><p>1 000 devices</p></div>
-<div class="last phase six" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Reaching 1&nbsp;000 (or more) per month would allow us to establish constant mass production, lowering costs even more and allowing us to produce more types of components instead of relying on their availability as spare parts."><span>Phase 6</span><p>1 000 devices / month</p></div>
-<br style="clear: both" />
-</div>
-</div>
-<p style="margin: 10px 0 40px">However, if we can plan for an initial batch of <strong>1&nbsp;000 devices</strong>, we can reduce cost of the device. Every donation starting from 100 € counts as <strong>one device</strong> to build. <!--Please keep this <strong>incredible level 
-of support</strong> we received so far!--></p>
-
-<div class="text-small" style="float: right; font-size: 0.6em; font-style: italic; line-height: 1.1em; margin-top: -0.3em; text-align: right">
-<span class="legend" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Pledging 1 500 EUR or more makes you entitled to get one of the prototypes.">
-<span style="display: inline-block; width: 1em; height: 1em; border: 1px solid white; background-color:rgb(217, 83, 79); margin-left: 0.5em"></span> &gt;= 1500 EUR</span>
-<span class="legend" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="Pledging 100 EUR or more makes you entitled to get a rebate for a production device.">
-<span style="display: inline-block; width: 1em; height: 1em; border: 1px solid white; background-color:rgb(240, 173, 78); margin-left: 0.5em"></span> &gt;= 100 EUR</span>
-<span style="display: inline-block; width: 1em; height: 1em; border: 1px solid white; background-color:#f1d0a0; margin-left: 0.5em"></span> &lt; 100 EUR<br/>subject to corrections for cancelled/rolled-back transactions</div>
-<h3 id="alreadycollected">We've already collected <span>
-<!--FUNDS--><!--/FUNDS-->
-</span> and we're heading for...</h3>
-<a href="https://shop.goldelico.com/campaign/9603.php" data-toggle="modal" id="progress-link">
-<div class="progress" style="position:relative; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset, 0px 0px 0px 2px white; margin-left: 2px; margin-right: 2px">
-<div class="progress-bar progress-bar-danger progress-bar-over1500" style="width: 0%">
-</div>
-<div class="progress-bar progress-bar-warning progress-bar-over100" role="progressbar"
-aria-valuenow="0"
-aria-valuemin="0" aria-valuemax="1000">
-<div id="fund-amount" style="position: relative; z-index: 10; white-space: nowrap; font-weight: bold">
-<span>
-<!--DONORS--><!--/DONORS-->
-</span> devices
-</div>
-<span class="sr-only">text</span>
-</div>
-<div class="progress-bar progress-bar-warning progress-bar-less" style="width: 0%; opacity: 0.5">
-</div>
-<p style="position:absolute; text-shadow: none; top: 10px; left: 18%; margin-left: -1px; width: 0px; height: 25px; text-align: center; border-left: 2px solid #333; opacity: 0.25"></p>
-<p style="position:absolute; text-shadow: none; top: 10px; left: 90%; margin-left: -1px; width: 0px; height: 25px; text-align: center; border-left: 2px solid #333; opacity: 0.25"></p>
-<!--<p style="position:absolute; text-shadow: none; top: 10px; left: 60%; margin-left: -1px; width: 0px; height: 25px; text-align: center; border-left: 2px solid #eee;"></p>-->
-</div>
-</a>
-<div class="legend">
-<p style="left: 0">0</p>
-<!--<p style="left: 5%;" class="milestone" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="If we reach 5 000 EUR we expect that we can do the schematics, component identification and initial mechanical PCB design."><span style="margin-left: -100%">5 000 €</span></p>
-<p style="left: 15%" class="milestone" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="If we reach 15 000 EUR we expect that we can build ~5 prototypes with basic functionality."><span style="margin-left: -100%">15 000 €</span></p>-->
-<!--<p style="left: 20%" class="milestone" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Thanks to reaching our goal, 25&nbsp;000&nbsp;EUR, we expect that we can build around 15 prototypes, test, fix bugs detected with them and make the design production ready."><span style="margin-left: -100%; border-bottom: 1px white dashed">25 000 €</span></p>
-<p style="left: 80%" class="milestone" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="The more funds we get, the cheaper one device becomes and the easier it gets to produce some hard to obtain parts, therefore it's beneficial to collect as much as possible."><span style="margin-left: -100%; border-bottom: 1px white dashed">100 000 €</span></p>
-<p style="right: 0" class="milestone">∞</p>-->
-<p style="left: 16.5%" class="milestone" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="The milestone of 200 devices is what we are using in our price estimations and what allows us to safely assume feasibility of mass production."><span style="border-bottom: 1px white dashed">200</p>
-<p style="left: 87.5%" class="milestone" data-toggle="popover" data-trigger="hover" data-placement="left" data-content="Reaching 1&nbsp;000 (or more) would allow us to buy the components earlier and at better prices, shortening the time till production, dropping the cost per device and making sourcing of hard to get components (like 1GB RAM or display connector) much easier."><span style="border-bottom: 1px white dashed">1&nbsp;000</p>
-</div>
-
-<p class="center" style="font-weight: bold">Donations are temporarily suspended due to reorganisation.<br/>We're sorry for inconvenience.</p>
-<p style="font-size: 80%" class="center">You can <a href="subscribe" style="color: white; text-decoration: underline" class="btn-subscribe" data-toggle="modal">subscribe to our newsletter</a> to stay informed.</p>
-<p class="center" style="margin-top: 10px"><a href="http://neo900.org/funds-transfer" style="color: white; text-decoration: underline; font-size: 80%">Information for our current donors</a></p>
-<!--
-<p class="center" style="margin-top:0" >Your donation will also serve as <a href="faq#rebate" class="link-inverted">a rebate for a finished device</a>.</p>
-
-<div class="center" style="margin-top: 20px">
-<a class="btn btn-primary btn-lg" href="https://shop.goldelico.com/wiki.php?page=Neo900">Donate now!</a>
-</div>
-<div class="center" style="font-size: 0.6em">
-<a target="_blank" style="color: white" href="http://talk.maemo.org/showpost.php?p=1383775&postcount=1026">Troubles with donation?</a>
-</div>
--->
+<h2 class="h1">Donating</h2>
+<p class="center" style="margin: 40px 0 10px">The project is currently <a href="/funds-transfer" style="color: white; text-decoration: underline">during the reorganization</a>. Donations to Neo900 UG will be resumed soon.</p>
+<p class="center"><strong>Current state:</strong> 16k EUR transferred by 88 donors</p>
+<p class="center">Please <a href="subscribe" style="color: white; text-decoration: underline" class="btn-subscribe" data-toggle="modal">subscribe to our newsletter</a> to stay informed!</p>
 </div>
 </div>
     
