@@ -2,6 +2,12 @@
 set -e
 shopt -s nullglob
 
+if [ ! -f assets/mysql_connect.inc.php ]; then
+echo "Missing file assets/mysql_connect.inc.php!"
+echo "Aborting..."
+exit 1
+fi
+
 rm -rf output
 mkdir -p output
 

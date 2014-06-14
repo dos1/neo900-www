@@ -1,0 +1,9 @@
+Pledged: 76045.00 EUR
+Used: 0.00 EUR
+Number of Pledges: 415
+Received: 76045.00 EUR
+Pledges 100+ EUR: 356
+Pledges 1500+ EUR: 9
+Pledged -100 EUR: 1000.00 EUR
+Pledged 100-1500 EUR: 57535.00 EUR
+Pledged 1500+ EUR: 17510.00 EUR
