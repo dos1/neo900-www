@@ -3,9 +3,13 @@ set -e
 shopt -s nullglob
 
 if [ ! -f assets/mysql_connect.inc.php ]; then
-echo "Missing file assets/mysql_connect.inc.php!"
-echo "Aborting..."
-exit 1
+  echo "Missing file assets/mysql_connect.inc.php!"
+  if [ "$1" != "--force" ]; then
+    echo "Aborting... (use --force to continue)"
+    exit 1
+  else
+    echo "Continuing anyway..."
+  fi
 fi
 
 rm -rf output
