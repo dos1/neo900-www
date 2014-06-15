@@ -69,6 +69,13 @@
                 </div>
                 {% endif %}
 
+                {% if article.next_article %}
+                <p style="float: right"><a href="/{{article.next_article.url}}">{{article.next_article.title}} &raquo;</a></p>
+                {% endif %}
+                {% if article.prev_article %}
+                <p><a href="/{{article.prev_article.url}}">&laquo; {{article.prev_article.title}}</a></p>
+                {% endif %}
+
                 <hr />
 
                 <a style="float: right; margin: 3px 35px" href="http://neo900.org/" class="btn btn-default">Learn more</a>

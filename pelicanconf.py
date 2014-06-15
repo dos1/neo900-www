@@ -40,3 +40,6 @@ ARTICLE_SAVE_AS = "news/{slug}.html"
 
 PAGE_URL = "{slug}"
 PAGE_SAVE_AS = "{slug}.html"
+
+PLUGIN_PATH = 'plugins'
+PLUGINS = ['neighbors']
