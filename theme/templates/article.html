@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title|striptags }}{% endblock %}
+{% block content %}
+
+        <div class="navbar navbar-default" data-spy="affix" data-offset-top="10">
+            <div class="container">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-collapse collapse">
+                    <nav id="topmenu2">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/#main" class="neo900">Neo900</a></li>
+                            <li><a href="/#about">About</a></li>
+                            <li><a href="/#features">Features</a></li>
+                            <li><a href="/#donate">Donate</a></li>
+                            <li><a href="/#news">News</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="faq">FAQ</a></li>
+                            <li><a href="specs">Specs</a></li>
+                            <li><a href="contact">Contact</a></li>
+                            <li><a href="subscribe" class="btn-subscribe" data-toggle="modal">Subscribe</a></li>
+                        </ul>
+                    </nav>
+                </div><!--/.navbar-collapse -->
+            </div>
+        </div>
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div id="main" class="jumbotron" style="z-index: 100; text-align: center;">
+            <div class="container" style="max-width: 100%; text-align: left; display: inline-block; padding-top: 30px">
+                <div class="small-left" style="max-width: 50%; float: left; margin: 0 auto;">
+                    <img src="http://static.neo900.org/neo900.png" style="max-width: 90%; max-height: 200px; margin-right: 15px; margin-bottom: 5px;" />
+                </div>
+                <div class="small-right" style="z-index: 10; display: inline-block; font-size: 0.9em; margin-top: -10px;">
+                    <h1>Introducing <span class="neo900">Neo900</span></h1>
+                    <p>Finally <strong>the first true successor</strong> to the N900.<br/>
+                    Following the FOSS spirit of <strong>Openmoko</strong>.</p>
+                    <a class="btn btn-primary btn-lg" href="/">Learn more &raquo;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="stripe">
+            <div>
+
+                <h2 class="news-title">{{ article.title}}</h2>
+                <p class="text-muted news-date">{{ article.locale_date }}</p>
+
+                {{ article.content }}
+
+                {% if article.hackernews or article.reddit or article.slashdot %}
+                <div class="followups">
+                    <span>Follow-up the discussion on:</span>
+                    {% if article.hackernews %}
+                    <img src="https://news.ycombinator.com/favicon.ico" width="16" height="16" /> <a href="{{article.hackernews}}" target="_blank">Hacker News</a>
+                    {% endif %}
+                    {% if article.reddit %}
+                    <img src="http://www.reddit.com/favicon.ico" width="16" height="16" /> <a href="{{article.reddit}}" 
+                    target="_blank">Reddit</a>
+                    {% endif %}
+                    {% if article.slashdot %}
+                    <img src="http://slashdot.org/favicon.ico" width="16" height="16" /> <a href="{{article.slashdot}}" 
+                    target="_blank">Slashdot</a>
+                    {% endif %}
+                </div>
+                {% endif %}
+
+                <hr />
+
+                <a style="float: right; margin: 3px 35px" href="http://neo900.org/" class="btn btn-default">Learn more</a>
+
+                <p class="text-muted">
+                    <a href="http://neo900.org/">The <span class="neo900">Neo900</span> project</a> aims to provide a successor of Nokia N900 Internet Tablet&trade; device, with faster CPU, more RAM and LTE modem, basing efforts on an already existing, mature and stable free platform - the <a href="http://gta04.org/">OpenPhoenux GTA04</a>, following the spirit of freedom known from <a href="http://openmoko.org/">Openmoko</a> devices.
+                </p>
+
+                <hr />
+
+                <script>
+                var idcomments_acct = '430809aa79b59205c1102e89a3dafc68';
+                {% if article.orig_url %}
+                var idcomments_post_id = 'http://neo900.org/{{article.orig_url}}';
+                {% else %}
+                var idcomments_post_id;
+                {% endif %}
+                var idcomments_post_url;
+                </script>
+                <span id="IDCommentsPostTitle" style="display:none"></span>
+                <script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

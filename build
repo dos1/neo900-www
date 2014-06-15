@@ -2,8 +2,8 @@
 set -e
 shopt -s nullglob
 
-if [ ! -f assets/mysql_connect.inc.php ]; then
-  echo "Missing file assets/mysql_connect.inc.php!"
+if [ ! -f mysql_connect.inc.php ]; then
+  echo "Missing file mysql_connect.inc.php!"
   if [ "$1" != "--force" ]; then
     echo "Aborting... (use --force to continue)"
     exit 1
@@ -12,48 +12,17 @@ if [ ! -f assets/mysql_connect.inc.php ]; then
   fi
 fi
 
-rm -rf output
-mkdir -p output
+make clean
+make publish
 
-FILES=*.html.in
-for f in $FILES
-do
-  echo "Processing ${f%.*}..."
-  cat header.tpl $f footer.tpl > output/${f%.*}
-done
+if [ -f mysql_connect.inc.php ]; then
+  cp mysql_connect.inc.php output/
+fi
 
-echo "---NEWS---"
-cd news
-NEWS=*.in
-for f in $NEWS
-do
-  echo "Processing news-${f%.*}..."
-  cat ../header.tpl header.tpl $f footer.tpl ../footer.tpl > ../output/news-${f%.*}
-done
-cd ../output
+ln -s /srv/hidden output/hidden
+ln -s /srv/stuff output/stuff
+ln -s /srv/photos output/photos
 
-echo "---progress bar---"
-#DATA="`wget http://shop.goldelico.com/campaign/9603.php -O -`"
-#FUNDS=`wget http://shop.goldelico.com/campaign/9603.php -O - | head -n 1 | cut -d: -f2 | cut -d. -f1`
-#DONORS=`wget http://shop.goldelico.com/campaign/9603.php -O - | head -n 5 | tail -n 1 | cut -d: -f2`
-#DONORSBIG=`wget http://shop.goldelico.com/campaign/9603.php -O - | head -n 6 | tail -n 1 | cut -d: -f2`
-#DONORS=$(($DONORS+$DONORSBIG))
+make rsync_publish
 
-FUNDS="76 045"
-DONORS="365"
-
-echo $FUNDS € / $DONORS
-sed -i "s|<!--FUNDS--><!--/FUNDS-->|<!--FUNDS-->$FUNDS €<!--/FUNDS-->|" index.html
-sed -i "s|<!--DONORS--><!--/DONORS-->|<!--DONORS-->$DONORS<!--/DONORS-->|" index.html
-sed -i "s|aria-valuenow=\"0\"|aria-valuenow=\"$DONORS\"|" index.html
-PERCENTAGE=`bc <<< "scale=2; $DONORS/11.11"`
-echo $PERCENTAGE%
-sed -i "s|/\*funds\*/ width: 0%;|/*funds*/ width: $PERCENTAGE%;|" index.html
-
-cp -r ../assets/* ../assets/.htaccess ./
-
-ln -s /srv/hidden hidden
-ln -s /srv/stuff stuff
-ln -s /srv/photos photos
-
-echo "Done!"
+echo "Ready!"

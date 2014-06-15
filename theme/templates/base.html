@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Finally the first true successor to the N900. The Neo900 project aims to provide a Fremantle (Maemo™ 5) compatible successor to the N900, with a faster CPU, more RAM and an LTE modem. Following the FOSS spirit of Openmoko.">
+    <meta name="author" content="Sebastian Krzyszkowiak">
+    <meta name="robots" content="index, follow">
+    <link rel="shortcut icon" href="ico/favicon.png">
+
+    <title>{% block title %}Introducing Neo900{%endblock%} - {{ SITENAME }}</title>
+    {% if FEED_ALL_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+    {% endif %}
+    {% if FEED_ALL_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+    {% endif %}
+    {% if FEED_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+    {% endif %}
+    {% if FEED_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+    {% endif %}
+    {% if CATEGORY_FEED_ATOM and category %}
+    <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
+    {% endif %}
+    {% if CATEGORY_FEED_RSS and category %}
+    <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
+    {% endif %}
+    {% if TAG_FEED_ATOM and tag %}
+    <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
+    {% endif %}
+    {% if TAG_FEED_RSS and tag %}
+    <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
+    {% endif %}
+    
+    <!-- Bootstrap core CSS -->
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link href="/css/neo900.css?v14" rel="stylesheet">
+    <link href="/css/lightbox.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+      <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body data-spy="scroll" data-target="#topmenu" data-offset="70">
+
+    <div class="modal fade" id="subscribe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="/subscribe.php" method="POST" id="subscription">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Want to be constantly informed about <strong class="neo900">Neo900</strong> progress?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Type your e-mail address:<br/><input type="email" name="neo900-mail" required="required" class="form-control" /></p>
+                        <p>Alternatively you can use our <a href="/rss">RSS</a>, <a href="http://facebook.com/neo900">Facebook</a> or <a href="https://plus.google.com/101237791266469792395/posts">Google+</a> feeds.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-lg btn-primary" value="Subscribe" />
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Close" />
+                    </div>
+                </form>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    {% block content %}
+    {% endblock %}
+
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted credit">
+        <strong>CC-BY-SA 3.0</strong> Neo900. <a href="/impressum">Impressum</a>. Project by <a href="http://handelsregister-online.net/neueintragung.cfm?cn=3966641" target="_blank">Neo900 UG</a> in cooperation with <a target="_blank" href="http://goldelico.com/">Golden Delicious Computers GmbH &amp; Co. KG</a>.<br/>
+        Site created by <a target="_blank"  href="http://dosowisko.net/">Sebastian Krzyszkowiak</a>. All trademarks are the property of their respective owners.</p>
+      </div>
+    </div> <!-- /footer -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/jquery.smooth-scroll.min.js"></script>
+    <script src="/static/jquery.stellar.min.js"></script>
+    <script src="/static/bootstrap.min.js"></script>
+    <script src="/static/ponies/ponies.js"></script>
+    <script src="/js/lightbox-2.6.min.js"></script>
+    <script>
+     $(function() {
+
+       if ($('#fund-amount').length) {
+         function updateProgress() {
+           $.get('campaign-info.txt?timestamp='+new Date().getTime(), function(d) {
+             d = d.split('\n');
+             var valF = parseInt(d[0].split(':')[1]);
+             var valFS = (valF + "").replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+             var valMore = parseInt(d[5].split(':')[1]);
+             var val = parseInt(d[4].split(':')[1]);
+             var valLess = parseInt(d[2].split(':')[1])-val-valMore;
+
+             $('.progress-bar-over100').width(val/11.11+"%").attr('aria-valuenow',val);
+             $('.progress-bar-over1500').width(valMore/11.11+"%").attr('aria-valuenow',val);
+             $('.progress-bar-less').width(valLess/11.11+"%").attr('aria-valuenow',val);
+             $('.btn-progressbar').width(val/11.11+"%");
+
+             if ((val+valMore) >= 1000) {
+               $('.progress-bar-over100').addClass('progress-bar-danger');
+               //$('#ourgoal').text('The campaign has reached its main goal! Thank you!');
+               //$('#ourgoal2').text("However, it's not over yet.\nYour donation will still serve as a rebate for a finished device.");
+             }
+             $('#fund-amount span').text(val+valMore);
+             $('#alreadycollected span').html(valFS+" €");
+             d.splice(1,1);
+             $('.progress-details').html(d.join('<br/>'));
+           });
+         }
+         updateProgress();
+         setInterval(updateProgress, 300000);
+       }
+
+       var $form = $('#subscription');
+       var submited = false;
+       $form.on('submit', function(e) {
+         if (submited) return false;
+         submited = true;
+         $form.find('input[type=submit]').fadeOut(500);
+         $form.find('.modal-body').slideUp(500);
+         $.post('/subscribe.php', "neo900-mail="+encodeURIComponent($form.find('input[type=email]').val()), function(txt) {
+           $("<p class=\"modal-body info\"></p>").text(txt).insertAfter($form.find('.modal-body')).hide().slideDown(500);
+         }, "text").fail(function() {
+           $("<p class=\"error modal-body info\">Unexpected error on subscribing.<br/>Please try again later.</p>").insertAfter($form.find('.modal-body')).hide().slideDown(500);
+         });
+         e.preventDefault();
+         return false;
+       });
+
+       $('.btn-subscribe').on('mousedown',function(e) {
+         $(this).attr('href','#subscribe');
+       }).on('click', function(e) {
+         $form.find('.modal-body.info').remove();
+         $form.find('input[type=submit]').show();
+         $form.find('.modal-body').show();
+         submited = false;
+       });
+
+       if (window.location.hash === '#subscribe') {
+         $('.btn-subscribe').attr('href','#subscribe').trigger('click').attr('href','/subscribe');
+       }
+
+       $('.faq-list').affix({
+         offset: {
+           top: function () {
+             return (this.top = $('#faq').offset().top-10)
+           }
+         }
+       });
+
+       $('a.smooth').smoothScroll({offset:document.querySelector('#faq') ? 0 : -50, beforeScroll: function(ev){$('.target').removeClass('target'); $(ev.scrollTarget).addClass('target');}, afterScroll: function(ev) {$(ev.scrollTarget).removeClass('target'); var a = $(window).scrollTop(); window.location.hash=ev.scrollTarget; $(window).scrollTop(a);} });
+       $('.credit,.milestone,.legend,.phase').popover();
+       $('#progress-link').on('click', function() {
+         $("#progress-details").modal('show');
+         updateProgress();
+         return false;
+       });
+       $.stellar({responsive: true, parallaxElements: false, horizontalScrolling: false, positionProperty: 'transform', hideDistantElements: false});
+
+       if ($('.faq-list').height() > ($(window).innerHeight() - 140)) {
+         $(window).off('.affix');
+         $('.faq-list').removeClass('affix');
+       }
+     });
+    </script>
+
+    <!-- Piwik -->
+    <script type="text/javascript"> 
+        var _paq = _paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://dosowisko.net/analytics/piwik//";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 1]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+        g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <noscript><p><img src="http://dosowisko.net/analytics/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+
+  </body>
+</html>

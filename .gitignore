@@ -1,2 +1,4 @@
 output
-assets/*.inc.php
+*.inc.php
+*.pyc
+*~

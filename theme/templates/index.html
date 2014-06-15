@@ -1,0 +1,341 @@
+{% extends "base.html" %}
+{% block content_title %}{% endblock %}
+{% block content %}
+        <div class="navbar navbar-default" data-spy="affix" data-offset-top="10">
+        <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-collapse collapse">
+        <nav id="topmenu">
+        <ul class="nav navbar-nav">
+        <li><a href="#main" class="neo900 smooth">Neo900</a></li>
+        <li><a href="#about" class="smooth">About</a></li>
+        <li><a href="#features" class="smooth">Features</a></li>
+        <li><a href="#donate" class="smooth">Donate</a></li>
+        <li><a href="#news" class="smooth">News</a></li>
+        <!--
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li class="dropdown-header">Nav header</li>
+        <li><a href="#">Separated link</a></li>
+        <li><a href="#">One more separated link</a></li>
+        </ul>
+        </li>
+        -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="faq">FAQ</a></li>
+        <li><a href="specs">Specs</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="subscribe" class="btn-subscribe" data-toggle="modal">Subscribe</a></li>
+        </ul>
+        </nav>
+        </div><!--/.navbar-collapse -->
+        </div>
+        </div>
+    
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="main" class="jumbotron" style="z-index: 100; text-align: center;">
+      <div class="container" style="max-width: 80%">
+      <div style="max-width: 700px; margin: 0 auto">
+      <img src="http://static.neo900.org/neo900.png" style="max-width: 100%" />
+      </div>
+      <div style="margin-top: 4%; z-index: 10">
+      <h1>Introducing <span class="neo900">Neo900</span></h1>
+        <p>Finally <strong>the first true successor</strong> to the N900.<br/>
+        Following the FOSS spirit of <strong>Openmoko</strong>.</p>
+        <a class="btn btn-primary btn-lg smooth btn-progress" href="#about">Read more...<!--<div class="btn-progressbar"></div>--></a>
+        </div>
+        </div>
+        </div>
+        
+        
+        
+        
+        
+        
+<!--<a target="_blank" class="notice" style="display: block; text-align: center; font-size: 1.5em; background-color: rgba(255,255,0,0.1); box-shadow: 0px 0px 5px rgba(0,0,0,0.1); padding: 5px; font-weight: bold" href="http://ohsw.org/">OHSW - showcasing the first partial prototype! 30. Nov - 1. Dec 2013, Munich, Germany</a>
+-->
+<!--<div class="stripe" style="background-color: rgba(255,255,0,0.1); box-shadow: 0px 0px 5px rgba(0,0,0,0.1); padding:0 ">
+<div class="row" style="max-width: 920px">
+<div class="col-md-3"><img src="http://static.neo900.org/video.png" width="100%" style="display: block" /></div>
+<div class="col-md-9" style="padding-left: 3em">
+<h2 style="margin-top: 15px">Our first showcase! <span class="text-muted" style="font-size: 0.75em">Nov 30, 2013</span></h2>
+<p class="lead" style="margin-bottom: 10px">See <strong>the phase I results</strong> on recording from <a href="http://ohsw.org" target="_blank">OHSW</a> <strong>Neo900 talk</strong>!</p>
+<p>You can also watch other <a target="_blank" href="https://www.youtube.com/channel/UCP_U91ipVWsF_2EiG3s6BKA/videos">hardware themed OHSW presentations</a>.<br/><em>The talks are spoken in English and German languages.</em></p>
+<a class="btn btn-primary" href="ohsw2013" target="_blank">Watch on YouTube</a> <a class="btn" href="http://www.openphoenux.org/ohsw2013/7%20Neo900.pdf" target="_blank">See the slides</a>
+</div>
+</div>
+</div>
+        -->
+
+<div class="stripe" style="background-color: rgba(0,0,0,0.01); box-shadow: 0px 0px 5px rgba(0,0,0,0.1); padding:0 ">
+<div class="row center jumbotron" style="padding: 0.5em">
+The device is currently <strong><a href="#news" class="smooth">in development</a></strong>. <span title="Estimate may still change.">Estimated release: <strong>Q4 2014</strong></span>.
+</div>
+</div>
+
+        
+        <div class="jumbotron stripe" id="about" >
+        <div>
+        <h2 class="h1">The device you've been waiting for</h2>
+        
+        
+        <div class="row featurette">
+        <div class="col-md-8" style="margin-top: 8%">
+        
+        
+        <p>Are you tired of all those closed mobile platforms? Do you want to truly own a device that has the ability to do whatever you want, just like your PC?</p>
+        
+        
+        <p>
+        The <strong class="neo900">Neo900</strong> project aims to provide a Fremantle (<a href="http://maemo.org/intro/">Maemo&trade; 5</a>) compatible successor to the N900, with a <strong>faster CPU</strong>, <strong>more RAM</strong> and an <strong>LTE modem</strong>. This is all based on a free, mature and stable platform - the <a href="http://gta04.org"><strong>GTA04</strong></a>.
+                
+        <p>We'll provide complete, <strong><a href="faq#complete">ready-to-use devices</a></strong>, as well as <strong>motherboard replacements</strong> for your current devices.</p>
+                
+                
+        <p>Most importantly, the <span class="neo900">Neo900</span> is an <strong>open platform</strong>, carrying on in the tradition  of the <a href="http://openmoko.org/">Openmoko</a> project.
+        <span class="neo900">Neo900</span> will support all operating systems available for GTA04 (<a href="http://qtmoko.sourceforge.net/">QtMoko</a>, <a href="http://shr-project.org/">SHR</a>, <a href="http://debian.org/">Debian</a>, <a href="http://replicant.us/">Replicant</a>, ...) and should serve as a great platform for porting systems like <a href="http://talk.maemo.org/showthread.php?t=91308">Maemo</a>, Ubuntu or Firefox OS - or even for writing your own one! We <strong>bring the hardware</strong>, you <strong>choose your OS</strong>.</p>
+                
+        
+        <a href="http://talk.maemo.org/showthread.php?t=91142" class="btn btn-default">See the forum thread &raquo;</a>
+        </div>
+        <div class="col-md-4">
+        <a href="http://openphoenux.org/"><img src="http://static.neo900.org/openphoenux.png" width="100%" style="display: block" /></a>
+        <div style="text-align: center">
+          <a target="_blank" href="https://www.youtube.com/watch?v=EJHMXQ3nSt0" style="position: relative; display:inline-block; width: 50%; margin-top: 30px;">
+          <img src="https://i1.ytimg.com/vi/EJHMXQ3nSt0/hqdefault.jpg" width="100%" />
+          <img src="http://static.neo900.org/youtube.png" style="position: absolute; top:50%; left:50%; margin-left:-60px; margin-top:-45px;" />
+          </a>
+        </div>
+        <p style="font-size:0.8em; margin-top: 10px; text-align:center">See the video presenting our idea</p>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+        <div class="stripe jumbotron pcb"  data-stellar-background-ratio="0.25" id="features">
+        <a target="_blank"  class="credit" href="https://secure.flickr.com/photos/amagill/2877921712/" data-toggle="popover" data-trigger="hover" data-placement="left" data-content='"JTAG board 1" licensed on CC-BY 2.0'>by Andrew Magill</a>
+        <div class="container">
+<h2 class="h1">Why is it so unique?</h2>
+        <div class="row ">
+
+        <div class="col-md-5">
+        <img src="http://static.neo900.org/neo900-avatar.jpg" style="box-shadow: 2px 2px 2px rgba(0,0,0,0.3)" class="featurette-image img-responsive" alt="Neo900">
+        </div>
+        <div class="col-md-7" style="margin-top: -0.5em">
+        <p class="lead">
+        
+        As a part of the <a href="http://openphoenux.org">OpenPhoenux</a> family, we're commited to provide <strong>the best hacking experience</strong> possible.
+        Even if we have no idea how to make use of some feature, <strong>you</strong> might have one and we won't stop you from <strong>implementing it</strong>.</p>
+        <p>Our dream is to get <strong>all your crazy needs</strong> covered. You can expect <strong>free, unlocked bootloader</strong>, combined <strong>GPS and GLONASS</strong> navigation system, stereo <strong>line-in</strong> and additional <strong>connection pads</strong> for your own or third party hardware - and those are just the biggest things that we plan to include.</p>
+        </p>
+        
+        <p>We're going to publish <strong>full documentation and schematics</strong> for the device. Although it's not a high-end device with the fastest available components, we believe that thanks to provided freedom, <strong>no planned obsolescence</strong> and ability to easily port new operating systems <span class="neo900">Neo900</span> is going to serve us and our users for a really long time.</p>
+        </div></div>
+        </div>
+        </div>
+
+    
+    
+    
+    <div class="jumbotron stripe n900side" id="features2">
+    <!-- Example row of columns -->
+    <div class="container">
+    <p class="center" style="margin-bottom: 20px; text-shadow: 1px 1px 0px rgba(255,255,255,0.5), 0px 0px 10px white, 0px 0px 25px white, 0px 0px 50px white;"><span class="neo900">Neo900</span> will preserve <strong>all the features</strong> of N900... but there's more!</p>
+    
+    <div class="row">
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+    <h3>LTE</h3>
+    <p>Optional LTE support allows to reach <strong>amazing connection speeds</strong> - up to 100 Mbps for download and 50 Mbps for upload. Never wait too long for downloading new software packages!</p>
+    </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+    <h3>USB OTG</h3>
+    <p>Use your Neo900 as <strong>a pocket computer</strong> and easily attach any additional peripherals via proper Micro USB On-The-Go port. Want to use laser keyboard? External hard disk? Gamepad? No problem!</p>
+    </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+    <h3>Battery hot-swap</h3>
+    <p>For all fast handed hackers over there that can replace the battery in just few seconds, we're going to support switching it <strong>on the fly</strong>, without turning off the phone!</p>
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+    <h3>Stereo line-in</h3>
+    <p>Put a small recording studio into your pocket! Together with standard mini-jack audio functions, we're including stereo line-in support. Make a <strong>high quality</strong> music demo straight on your phone!</p>
+    </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+    <h3>IrDA and Consumer IR</h3>
+    <p>Use your phone as a <strong>universal TV remote</strong> or... connect the serial console via IrDA link. Low level debugging couldn't be made easier.</p>
+    </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+    <h3>Lots of sensors</h3>
+    <p>Accelerometer, ambient light and proximity sensors, compass, gyroscope, barometer, thermometer, RFID... All ready for <strong>any extraordinary usage</strong> you can come up with.</p>
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+    <h3>GPS and GLONASS</h3>
+    <p>Enjoy <strong>increased accuracy</strong> and faster fix times thanks to concurrent support of two navigation standards - American GPS and Russian GLONASS.</p>
+    </div>
+    </div>
+    
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+    <h3>Prototyping support</h3>
+    <p>We're hardware and software hackers ourselves and we want to make life of other hackers easier. Make use of <strong>additional contact pads</strong> and sockets we'll put there just for you to experiment with.</p>
+    </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+    <h3>FLOSS stack and privacy</h3>
+    <p>Neo900 can be used with <a href="faq#floss">100% Free Software stack</a>. <strong>Forget about spying</strong> and influences of intelligence agencies. If you turn off GSM modem from the software, you can be sure it's really turned off.</p>
+    </div>
+    </div>
+    </div>
+    <p class="center" style="margin-top: 20px; text-shadow: 1px 1px 0px rgba(255,255,255,0.5), 0px 0px 15px white;">See the full <a href="specs">specification draft</a> for more details</p>
+    </div>
+    </div>
+
+    <div class="jumbotron stripe sunrise" id="donate" data-stellar-background-ratio="0.5">
+    <a target="_blank"  class="credit" href="https://secure.flickr.com/photos/ptrktn/4233596678/" data-toggle="popover" data-trigger="hover" data-placement="left" data-content='"The First Sunrise of 2010" licensed on CC-BY 2.0'>by ptrktn</a>
+    <div class="container">
+<h2 class="h1">Donating</h2>
+<p class="center" style="margin: 40px 0 10px">The project is currently <a href="/funds-transfer" style="color: white; text-decoration: underline">in the reorganization</a>. Donations to Neo900 UG will be resumed soon.</p>
+<p class="center"><strong>Current state:</strong> 16k EUR transferred by 88 donors</p>
+<p class="center">Please <a href="subscribe" style="color: white; text-decoration: underline" class="btn-subscribe" data-toggle="modal">subscribe to our newsletter</a> to stay informed!</p>
+</div>
+</div>
+    
+
+
+      <!-- /END THE FEATURETTES -->
+
+    <div class="jumbotron sripe op" id="news" style="margin-top: 50px">
+      <div class="container" style="margin-top: -30px">
+<h2 class="h1">News</h2>
+<div class="row">
+<div class="col-md-6">
+
+
+<h4 class="news-title" style="font-weight: bold"><a href="{{ SITEURL }}/{{ articles_page.object_list[0].url }}">{{ articles_page.object_list[0].title }}</a></h4>
+<p class="text-muted news-date" style="font-size: 0.7em">{{ articles_page.object_list[0].locale_date }}</p>
+
+<div style="font-size: 0.7em">
+
+{{ articles_page.object_list[0].summary }}
+
+<p><a href="{{ SITEURL }}/{{ articles_page.object_list[0].url }}" class="btn btn-primary" style="margin: 20px 0;">Read more</a></p>
+
+     </div>
+<hr/>
+
+{% for article in articles_page.object_list[1:] %}
+<div>
+<h4 class="news-title" style="font-weight: bold"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h4>
+<p class="text-muted news-date" style="font-size: 0.7em">{{ article.locale_date }}</p>
+</div>
+{% endfor %}
+
+<!--<a href="news" class="btn btn-default">More news</a>-->
+</div>
+<div class="col-md-3" style="text-shadow: 0px 0px 20px white;">
+<h3 style="margin-top: 5px">Presence</h3>
+<div class="bs-sidebar" style="font-size: 0.7em">
+<ul class="nav nav-list bs-sidenav">
+
+<li><a target="_blank"  href="http://blogs.fsfe.org/pboddie/?cat=23804">Paul Boddie - Neo900: Turning the corner</a></li>
+
+<li><a target="_blank"  href="http://slashdot.org/story/13/12/02/2246227/neo900-hacker-phone-reaches-minimum-number-of-pre-orders-for-production"> Slashdot - Neo900 Hacker Phone Reaches Minimum Number of Pre-Orders For Production</a></li>
+
+<li><a target="_blank"  href="http://www.wired.com/wiredenterprise/2013/11/neo900/">Wired.com - Out in the Open: The German Plot to Give You Complete Control of Your Phone</a></li>
+<li><a target="_blank"  href="http://www.fastcolabs.com/3021652/an-open-source-phone-thats-completely-unlocked-hardware-too">Co.Labs - An Open Source Phone That’s Completely Unlocked, Hardware Too</a></li>
+<li><a target="_blank"  href="http://slashdot.org/story/13/11/02/1637236/openphoenux-neo900-bills-itself-as-successor-to-nokias-n900"> Slashdot - OpenPhoenux Neo900 Bills Itself As Successor To Nokia's N900</a></li>
+<li><a target="_blank"  href="http://www.phoronix.com/scan.php?page=news_item&px=MTUwMTU"> Phoronix - OpenMoko Might Live On With N900 Phone Base</a></li>
+<li><a target="_blank"  href="https://news.ycombinator.com/item?id=6646448"> Hacker News - Introducing Neo900</a></li>
+<li><a target="_blank"  href="http://blog.slyon.de/2013/11/02/introducing-openphoenux-neo900/"> SlyBlog - Introducing OpenPhoenux Neo900</a></li>
+<li><a target="_blank"  href="http://blogs.fsfe.org/pboddie/?p=430">Paul Boddie - Combining Communities to Create Opportunities</a></li>
+<li><a target="_blank"  href="http://liliputing.com/2013/10/neo900-keeps-nokia-n900-dream-alive-promise-open-hardware.html">Liliputing - Neo900 keeps the Nokia N900 dream alive with promise of open hardware</a></li>
+<li><a target="_blank"  href="http://www.ubergizmo.com/2013/10/neo900-rolls-back-the-years-with-open-hardware/">Ubergizmo - Neo900 Rolls Back The Years With Open Hardware</a></li>
+<li><a target="_blank"  href="http://thedroidguy.com/2013/10/nokia-n900-lives-neo900-able-run-android/">The Droid Guy - Nokia N900 Lives On Through The Neo900, Able To Run Android</a></li>
+
+</ul>
+</div>
+
+</div>
+<div class="col-md-3" style="position: relative">
+<h3 style="margin-top: 5px">Social media</h3>
+<div class="bs-sidebar" style="font-size: 0.75em">
+<ul class="nav nav-list bs-sidenav">
+<li><a target="_blank" href="https://facebook.com/neo900">Facebook</a></li>
+<li><a target="_blank"  href="https://plus.google.com/+neo900org">Google+</a></li>
+<li><a target="_blank"  href="https://plus.google.com/u/0/communities/111739819921691335869">OpenPhoenux on Google+</a></li>
+</ul>
+
+</div>
+<h3>Related projects</h3>
+<div class="bs-sidebar" style="font-size: 0.7em">
+<ul class="nav nav-list bs-sidenav">
+<li><a target="_blank"  href="http://talk.maemo.org/showthread.php?t=91308">The Fremantle Porting Task Force</a></li>
+<li><a target="_blank"  href="http://shr-project.org/">SHR</a></li>
+<li><a target="_blank"  href="http://freesmartphone.org">freesmartphone.org</a></li>
+<li><a target="_blank"  href="http://qtmoko.sourceforge.net/">QtMoko</a></li>
+<li><a target="_blank"  href="http://replicant.us/">Replicant</a></li>
+</ul>
+</div>
+
+</div>
+      
+        </div>
+    </div>
+
+
+    </div> <!-- /container -->
+    
+<div class="modal fade" id="progress-details" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title"><strong class="neo900">Neo900</strong> Fundraiser Details</h4>
+</div>
+<div class="modal-body progress-details">
+...
+</div>
+<div class="modal-footer">
+<input type="button" class="btn btn-default" data-dismiss="modal" value="Close" />
+</div>
+</form>
+</div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+    <style>
+    .btn-progressbar, .progress-bar {
+/*funds*/ width: 0%;
+    }
+    /*.btn-progressbar { width: 50%; }*/
+    </style>
+
+{% endblock content %}

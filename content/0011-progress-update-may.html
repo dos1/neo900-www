@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>Neo900 Progress Update - May</title>
+<meta name="date" content="2014-05-22 00:42:25" />
+<meta name="orig_url" content="news-0011-progress-update-may" />
+<meta name="reddit" content="http://www.reddit.com/r/linux/comments/26acp6/openphoenux_neo900_may_progress_update/" />
+</head>
+<body>
+
+<pre style="font-family: Open Sans, sans; font-size: 150%">Update: <a href="/funds-transfer">Transfer of funds for reorganization</a></pre>
+
+<p class="lead">Some of you may already have noticed that few days ago donations were suspended and Golden Delicious Computers announced stepping down and issuing refunds. What's going on? Is 
+there something to worry about?</p>
+
+<p><strong style="font-size: 1.5em">No!</strong> As strange as it may sound - the refunds seem to be <strong>the best way for the project to safely continue</strong>. And stepping down sometimes 
+allows to take further 
+steps 
+forward.</p>
+
+<p>In <a href="0010-progress-update-april">previous progress updates</a> we reported some organizational issues being worked on with lawyers and tax advisers. Despite of our earlier reports about 
+success, it turned out that there are 
+still 
+important things to resolve. The hassle came mostly from the fact, that in the light of law, our structure looked completely different than it really was. Goldelico was supposed to take care of 
+technical and logistic side of the project on behalf of Neo900 UG, but due to some mismatch between our intentions and resulting situation from legal point of view, it found itself at the position 
+of entrepreneur. This wasn't the desired state of things for both sides and would cause problems sooner or later, so we tried to find a way to sort it all out. The most obvious solution - asking 
+donors for permission and transferring the money to Neo900 UG - was rejected by tax advisers, despite of them suggesting it earlier (long story short: it could be possible with complete payments, 
+but the VAT handling with the partial ones like we had caused the idea to collapse). During past few weeks some different ideas also got discussed, but there always was some part that someone 
+wasn't happy with. After very long mail exchanging, GDC announced what we were all trying to avoid all that time.</p>
+
+<p>GDC <a href="http://talk.maemo.org/showthread.php?p=1425501" target="_blank">announced</a> that it will step back from the project and refund the collected money (minus the already spent 
+funds). 
+Both sounds very serious and not really optimistic, just like our mood 
+around 
+that time. Fortunately, the sun started to show up from behind the rainy clouds pretty soon, first with Nikolaus clarifying that he's still interested in working on Neo900 and then with Joerg's 
+idea of donors specifying Neo900 UG account as the destination account to refund the money by GDC.</p>
+
+<p>That idea turned out to be ground breaking. GDC formally canceling the project and refunding the money seemed to resolve the issues with taxes. We consulted our lawyers and tax advisers once 
+again 
+and it turned out that <a href="http://talk.maemo.org/showthread.php?p=1426225" target="_blank">it's in fact the way to go</a>! We're canceling the donations and asking the donors to redo them, 
+but 
+with Neo900 UG instead of GDC now - and we're offering an option for direct 
+transfer from GDC to Neo900 UG to avoid unnecessary hassle on your side and to avoid fees and currency conversion losses. Changing one small detail (transfer of order vs. refund + new 
+donation) completely changed the game. Within the next few days all our donors will receive an e-mail with detailed instructions on what to do. <a href="http://talk.maemo.org/showthread.php?p=1426234" target="_blank">See details</a>.</p>
+
+<p>To sum up, looks like "canceling the project" allowed us to finally fix the organizational structure issues and move everything forward. Legal world is indeed sometimes hard to follow...</p>
+
+<p>OK, so what else? While fighting with the system and our mistakes from the past had eaten quite a lot of our time and resources, slowing down or even suspending the development at some point, 
+there are still a few things worth noting in a progress update:</p>
+<ul>
+<li>
+    Sebastian started <a href="http://talk.maemo.org/showthread.php?t=93210" target="_blank">his tests of PHS8 modem</a> on our first prototype board, resulting in <a 
+href="https://www.youtube.com/watch?v=FNSPEWvTJTc" target="_blank">this short video</a> showing "the 
+family 
+conversation" - that is, Neo900 (together with Debian PC it's 
+connected to) and GTA04 (running SHR) calling each other and sending a text message using <a href="http://freesmartphone.org/" target="_blank">freesmartphone.org</a> middleware and SHR GUI apps.
+<div style="margin: 10px 0">
+<iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/FNSPEWvTJTc?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+<li>
+    Also, the GPS/GLONASS engine has been tested with our Low-noise amplifier, layout and N900 antenna. Results: <a href="http://talk.maemo.org/showthread.php?t=93209" target="_blank">exciting and 
+positive</a>! For example we seen a TTFF (warm) of ~10 seconds.
+<div style="margin: 10px 0">
+<a href="http://talk.maemo.org/showthread.php?t=93209" target="_blank">
+<img src="https://dl.dropboxusercontent.com/u/8497686/xgps2.png" width="560" />
+</a>
+</div>
+</li>
+<li>
+    Sebastian also gave an OpenPhoenux related talk at <a href="http://piwo.informatyka.org/" target="_blank">P.I.W.O. Free Software event</a> in Poznań, Poland titled "Free Mobile - when Android 
+is 
+not enough". The slides in English are <a href="http://neo900.org/piwo/piwo.pdf" target="_blank">available here</a> 
+and aside from covering some Openmoko/OpenPhoenux history and community projects, there is also an interesting part about privacy issues with cell phones and how Neo900 will deal with them, 
+probably making Neo900 the safest phone you can get. We're also working on a more detailed paper on this topic - stay tuned!
+<div style="margin: 10px 0">
+<a href="http://neo900.org/piwo/piwo.pdf" target="_blank">
+<img src="https://scontent-b-fra.xx.fbcdn.net/hphotos-frc3/t31.0-8/10257579_762890427076481_63679653399853938_o.jpg" width="560" />
+</a>
+</div>
+</li>
+<li>
+    Nikolaus <a href="http://lists.goldelico.com/pipermail/gta04-owner/2014-May/005651.html" target="_blank">keeps working on 3.15 kernel for GTA04</a>, progressing further into <a 
+href="http://projects.goldelico.com/p/gta04-main/downloads/get/Device_Tree_Migration.pdf" target"_blank">the device tree 
+migration</a>, which has interesting implication for our project: thanks to that it should be easy to 
+create universal GTA04 images that work on every GTA04 based hardware - Neo900 included. This means that in many cases, GTA04 owners should be able to just take their SD cards and put them into 
+Neo900, and vice versa, being able to boot exactly the same operating system as they used before!
+</li>
+<li>
+    Speaking of GTA04, Sebastian recorded <a href="https://www.youtube.com/watch?v=p1IM9Vd2_2s" target="_blank">a short video</a> showcasing <a href="http://replicant.us/" 
+target="_blank">Replicant</a> 4.2.2 (FLOSS 
+Android distribution) and <a 
+href="http://shr-project.org/" target="_blank">SHR</a> 
+running on GTA04, 
+multibooting from the same SD card. Notice how smoothly 
+Android works on this 800 MHz CPU without any 3D acceleration! Also note that this stuff should work on Neo900 just the same way.
+<div style="margin: 10px 0">
+<iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/p1IM9Vd2_2s?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</li>
+</ul>
+<p>
+And last, but definitely not least: say hello to our new, fourth team member, <strong>Werner Almesberger</strong>! Werner for now acts in an advisory role and helps with reviews, and may later 
+play an 
+active 
+part 
+in QA. He's an Openmoko veteran as well, recently involved in <a href="http://qi-hardware.com/" target="_blank">Qi Hardware</a> projects; author of <a 
+href="http://en.qi-hardware.com/wiki/Ben_WPAN" target="_blank">Ben-WPAN</a> and <a href="https://gitorious.org/anelok/anelok" target="_blank">Anelok</a>, and all of you have used 
+some of his 
+contributions to Linux already.</p>
+
+<p>As Friedrich Nietzsche famously said, <em>"what doesn't kill you makes you stronger"</em>. We feel that the Neo900 project is gathering strength after all the twists and turns it experienced. 
+We're 
+looking 
+forward for the future with more optimism than ever, taking lessons from our past mistakes. Thank you for supporting us in this long and exciting journey!</p>
+
+</body>
+</html>
