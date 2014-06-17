@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Sebastian Krzyszkowiak'
+AUTHOR = u'dos'
 SITENAME = u'Neo900'
 SITEURL = 'http://neo900.org'
 
@@ -11,19 +11,16 @@ TIMEZONE = 'Europe/Warsaw'
 DEFAULT_LANG = u'en'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_RSS = 'rss.xml'
+FEED_RSS = 'rss.xml'
+TRANSLATION_FEED_ATOM = None
 
-# Blogroll
-LINKS =  (('Pelican', 'http://getpelican.com/'),
-          ('Python.org', 'http://python.org/'),
-          ('Jinja2', 'http://jinja.pocoo.org/'),
-          ('You can modify those links in your config file', '#'),)
-
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+IGNORE_FILES = ['.*.kate-swp']
 
 DEFAULT_PAGINATION = 0
+
+DIRECT_TEMPLATES = ('index')
+
+DEFAULT_CATEGORY = 'news'
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True

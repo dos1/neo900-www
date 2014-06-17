@@ -247,24 +247,26 @@ The device is currently <strong><a href="#news" class="smooth">in development</a
 <div class="row">
 <div class="col-md-6">
 
+{% for category in categories if category[0] == 'news' %}
 
-<h4 class="news-title" style="font-weight: bold"><a href="{{ SITEURL }}/{{ articles_page.object_list[0].url }}">{{ articles_page.object_list[0].title }}</a></h4>
-<p class="text-muted news-date" style="font-size: 0.7em">{{ articles_page.object_list[0].locale_date }}</p>
+<h4 class="news-title" style="font-weight: bold"><a href="{{ SITEURL }}/{{ category[1][0].url }}">{{ category[1][0].title }}</a></h4>
+<p class="text-muted news-date" style="font-size: 0.7em">{{ category[1][0].locale_date }}</p>
 
 <div style="font-size: 0.7em">
 
-{{ articles_page.object_list[0].summary }}
+{{ category[1][0].summary }}
 
-<!-- <p><a href="{{ SITEURL }}/{{ articles_page.object_list[0].url }}" class="btn btn-primary" style="margin: 20px 0;">Read more</a></p> -->
+<!-- <p><a href="{{ SITEURL }}/{{ category[1][0].url }}" class="btn btn-primary" style="margin: 20px 0;">Read more</a></p> -->
 
      </div>
 <hr/>
 
-{% for article in articles_page.object_list[1:] %}
+{% for article in category[1][1:] %}
 <div>
 <h4 class="news-title" style="font-weight: bold"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h4>
 <p class="text-muted news-date" style="font-size: 0.7em">{{ article.locale_date }}</p>
 </div>
+{% endfor %}
 {% endfor %}
 
 <!--<a href="news" class="btn btn-default">More news</a>-->
@@ -294,6 +296,25 @@ The device is currently <strong><a href="#news" class="smooth">in development</a
 
 </div>
 <div class="col-md-3" style="position: relative">
+
+{% for category in categories if category[0] == 'ublog' %}
+<h3 style="margin-top: 5px">µBlog</h3>
+<div class="bs-sidebar" style="font-size: 0.75em">
+<ul class="nav nav-list bs-sidenav" style="padding: 10px">
+{% for post in category[1] %}
+<li>
+<div class="content">
+{{ post.content }}
+</div>
+<div class="text-muted" style="text-align: right; font-size: 0.8em;">
+<strong>{{ post.author }}</strong>, {{ post.locale_date }}
+</div>
+</li>
+{% endfor %}
+</ul>
+</div>
+{% endfor %}
+
 <h3 style="margin-top: 5px">Social media</h3>
 <div class="bs-sidebar" style="font-size: 0.75em">
 <ul class="nav nav-list bs-sidenav">

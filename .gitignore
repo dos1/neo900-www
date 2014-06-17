@@ -2,3 +2,4 @@ output
 *.inc.php
 *.pyc
 *~
+*.pid
