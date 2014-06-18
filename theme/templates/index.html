@@ -298,15 +298,15 @@ The device is currently <strong><a href="#news" class="smooth">in development</a
 <div class="col-md-3" style="position: relative">
 
 {% for category in categories if category[0] == 'ublog' %}
-<h3 style="margin-top: 5px">µBlog</h3>
+<h3 style="margin-top: 5px; font-weight: bold">µBlog</h3>
 <div class="bs-sidebar" style="font-size: 0.75em">
-<ul class="nav nav-list bs-sidenav" style="padding: 10px; max-height: 500px; overflow-y: auto">
+<ul class="nav nav-list bs-sidenav" style="padding: 10px; max-height: 500px; overflow-y: auto; margin-bottom: 20px">
 {% for post in category[1] %}
 <li>
-<div class="content">
+<div class="content" style="line-height: 1.5em;">
 {{ post.content }}
 </div>
-<div class="text-muted" style="text-align: right; font-size: 0.8em;">
+<div class="text-muted" style="text-align: right; font-size: 0.8em; border-top: 1px solid #eee; margin-top: 5px">
 <strong>{{ post.author }}</strong>, {{ post.date }}
 </div>
 </li>
