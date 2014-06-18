@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'dos'
+AUTHOR = u'neo900'
 SITENAME = u'Neo900'
 SITEURL = 'http://neo900.org'
 
@@ -18,7 +18,7 @@ IGNORE_FILES = ['.*.kate-swp']
 
 DEFAULT_PAGINATION = 0
 
-DIRECT_TEMPLATES = ('index')
+DIRECT_TEMPLATES = ['index']
 
 DEFAULT_CATEGORY = 'news'
 

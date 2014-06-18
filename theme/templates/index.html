@@ -300,7 +300,7 @@ The device is currently <strong><a href="#news" class="smooth">in development</a
 {% for category in categories if category[0] == 'ublog' %}
 <h3 style="margin-top: 5px">µBlog</h3>
 <div class="bs-sidebar" style="font-size: 0.75em">
-<ul class="nav nav-list bs-sidenav" style="padding: 10px">
+<ul class="nav nav-list bs-sidenav" style="padding: 10px; max-height: 500px; overflow-y: auto">
 {% for post in category[1] %}
 <li>
 <div class="content">
