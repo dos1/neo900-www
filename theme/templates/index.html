@@ -249,7 +249,10 @@ The device is currently <strong><a href="#news" class="smooth">in development</a
 <div class="col-md-6">
 
 {% for category in categories if category[0] == 'news' %}
-
+<div style="float: right; margin-bottom: -10px">
+<a href="/subscribe" class="btn-subscribe" data-toggle="modal"><img src="/static/mail.png" style="vertical-align: baseline"/></a>
+<a href="/feeds/news.atom.xml" target="_blank"><img src="/static/rss.png" style="vertical-align: baseline"/></a>
+</div>
 <h4 class="news-title" style="font-weight: bold"><a href="{{ SITEURL }}/{{ category[1][0].url }}">{{ category[1][0].title }}</a></h4>
 <p class="text-muted news-date" style="font-size: 0.7em">{{ category[1][0].locale_date }}</p>
 
@@ -296,8 +299,12 @@ The device is currently <strong><a href="#news" class="smooth">in development</a
 </div>
 
 </div>
-<div class="col-md-3" style="position: relative">
 
+<div class="col-md-3" style="position: relative">
+<div style="float: right; margin-bottom: -10px">
+<a href="http://twitter.com/neo900ug" target="_blank"><img src="/static/twitter.png" style="vertical-align: baseline"/></a>
+<a href="/feeds/ublog.atom.xml" target="_blank"><img src="/static/rss.png" style="vertical-align: baseline"/></a>
+</div>
 {% for category in categories if category[0] == 'ublog' %}
 <h3 style="margin-top: 5px; font-weight: bold">µBlog</h3>
 <div class="bs-sidebar" style="font-size: 0.75em">
