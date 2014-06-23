@@ -1,60 +1,7 @@
 {% extends "base.html" %}
+{% block body_params%}data-spy="scroll" data-target="#topmenu" data-offset="70"{% endblock %}
 {% block content_title %}{% endblock %}
 {% block content %}
-        <div class="navbar navbar-default" data-spy="affix" data-offset-top="10">
-        <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        </button>
-        <div class="navbar-collapse collapse">
-        <nav id="topmenu">
-        <ul class="nav navbar-nav">
-        <li><a href="#main" class="neo900 smooth">Neo900</a></li>
-        <li><a href="#news" class="smooth">News</a></li>
-        <li><a href="#about" class="smooth">About</a></li>
-        <li><a href="#features" class="smooth">Features</a></li>
-        <li><a href="#donate" class="smooth">Donate</a></li>
-        <!--
-        <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Another action</a></li>
-        <li><a href="#">Something else here</a></li>
-        <li class="divider"></li>
-        <li class="dropdown-header">Nav header</li>
-        <li><a href="#">Separated link</a></li>
-        <li><a href="#">One more separated link</a></li>
-        </ul>
-        </li>
-        -->
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-        <li><a href="faq">FAQ</a></li>
-        <li><a href="specs">Specs</a></li>
-        <li><a href="contact">Contact</a></li>
-        <li><a href="subscribe" class="btn-subscribe" data-toggle="modal">Subscribe</a></li>
-        </ul>
-        </nav>
-        </div><!--/.navbar-collapse -->
-        </div>
-        </div>
-    
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    
-    <div id="main" class="jumbotron stripe" style="text-align: center;">
-        <div class="row" style="padding-bottom:0;padding-top:15px">
-            <div class="col-md-6 col-sm-6">
-                <img src="/static/neo900-t.png" style="width: 100%" />
-            </div>
-            <div class="col-md-6 col-sm-6" style="padding-top: 1.5em">
-             <p style="text-shadow: 0px 0px 5px white">The <strong>truly</strong> open smartphone<br/>that cares about your <strong>privacy</strong>.</p>
-             <a class="btn btn-primary btn-lg smooth" href="#about">Learn more...</a>
-            </div>
-        </div>
-    </div>
     
     <div class="stripe" style="background-color: rgba(0,0,0,0.01); box-shadow: 0px 0px 5px rgba(0,0,0,0.1); padding:0 ">
     <div class="row center jumbotron" style="padding: 0.5em">
@@ -307,30 +254,5 @@
 
 
     </div> <!-- /container -->
-    
-<div class="modal fade" id="progress-details" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-<h4 class="modal-title"><strong class="neo900">Neo900</strong> Fundraiser Details</h4>
-</div>
-<div class="modal-body progress-details">
-...
-</div>
-<div class="modal-footer">
-<input type="button" class="btn btn-default" data-dismiss="modal" value="Close" />
-</div>
-</form>
-</div><!-- /.modal-content -->
-</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-    <style>
-    .btn-progressbar, .progress-bar {
-/*funds*/ width: 0%;
-    }
-    /*.btn-progressbar { width: 50%; }*/
-    </style>
 
 {% endblock content %}

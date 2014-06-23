@@ -50,7 +50,7 @@
 
   </head>
 
-  <body data-spy="scroll" data-target="#topmenu" data-offset="70">
+  <body {% block body_params %}{%endblock%}>
 
     <div class="modal fade" id="subscribe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -73,6 +73,47 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
+    <div class="navbar navbar-default" data-spy="affix" data-offset-top="10">
+        <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-collapse collapse">
+                <nav id="topmenu">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{% if self.title() != SITENAME %}/{% endif %}#main" class="neo900 smooth">Neo900</a></li>
+                        <li><a href="{% if self.title() != SITENAME %}/{% endif %}#news" class="smooth">News</a></li>
+                        <li><a href="{% if self.title() != SITENAME %}/{% endif %}#about" class="smooth">About</a></li>
+                        <li><a href="{% if self.title() != SITENAME %}/{% endif %}#features" class="smooth">Features</a></li>
+                        <li><a href="{% if self.title() != SITENAME %}/{% endif %}#donate" class="smooth">Donate</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li{% if self.title() == "FAQ" %} class="active"{% endif %}><a href="faq">FAQ</a></li>
+                        <li{% if self.title() == "Specs" %} class="active"{% endif %}><a href="specs">Specs</a></li>
+                        <li{% if self.title() == "Contact" %} class="active"{% endif %}><a href="contact">Contact</a></li>
+                        <li{% if self.title() == "Subscribe" %} class="active"{% endif %}><a href="subscribe" class="btn-subscribe" data-toggle="modal">Subscribe</a></li>
+                    </ul>
+                </nav>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </div>
+    
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    
+    <div id="main" class="jumbotron stripe" style="text-align: center;">
+        <div class="row" style="padding-bottom:0;padding-top:15px">
+            <div class="col-md-6 col-sm-6">
+                <img src="/static/neo900-t.png" style="width: 100%" />
+            </div>
+            <div class="col-md-6 col-sm-6" style="padding-top: 1.5em">
+             <p style="text-shadow: 0px 0px 5px white">The <strong>truly</strong> open smartphone<br/>that cares about your <strong>privacy</strong>.</p>
+             <a class="btn btn-primary btn-lg smooth" href="{% if self.title() != SITENAME %}/{% endif %}#about">Learn more...</a>
+            </div>
+        </div>
+    </div>
+    
     {% block content %}
     {% endblock %}
 
@@ -97,37 +138,6 @@
     <script src="/js/lightbox-2.6.min.js"></script>
     <script>
      $(function() {
-
-       if ($('#fund-amount').length) {
-         function updateProgress() {
-           $.get('campaign-info.txt?timestamp='+new Date().getTime(), function(d) {
-             d = d.split('\n');
-             var valF = parseInt(d[0].split(':')[1]);
-             var valFS = (valF + "").replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-             var valMore = parseInt(d[5].split(':')[1]);
-             var val = parseInt(d[4].split(':')[1]);
-             var valLess = parseInt(d[2].split(':')[1])-val-valMore;
-
-             $('.progress-bar-over100').width(val/11.11+"%").attr('aria-valuenow',val);
-             $('.progress-bar-over1500').width(valMore/11.11+"%").attr('aria-valuenow',val);
-             $('.progress-bar-less').width(valLess/11.11+"%").attr('aria-valuenow',val);
-             $('.btn-progressbar').width(val/11.11+"%");
-
-             if ((val+valMore) >= 1000) {
-               $('.progress-bar-over100').addClass('progress-bar-danger');
-               //$('#ourgoal').text('The campaign has reached its main goal! Thank you!');
-               //$('#ourgoal2').text("However, it's not over yet.\nYour donation will still serve as a rebate for a finished device.");
-             }
-             $('#fund-amount span').text(val+valMore);
-             $('#alreadycollected span').html(valFS+" €");
-             d.splice(1,1);
-             $('.progress-details').html(d.join('<br/>'));
-           });
-         }
-         updateProgress();
-         setInterval(updateProgress, 300000);
-       }
-
        var $form = $('#subscription');
        var submited = false;
        $form.on('submit', function(e) {
@@ -165,13 +175,8 @@
          }
        });
 
-       $('a.smooth').smoothScroll({offset:document.querySelector('#faq') ? 0 : -50, beforeScroll: function(ev){$('.target').removeClass('target'); $(ev.scrollTarget).addClass('target');}, afterScroll: function(ev) {$(ev.scrollTarget).removeClass('target'); var a = $(window).scrollTop(); window.location.hash=ev.scrollTarget; $(window).scrollTop(a);} });
+       $('a.smooth[href^="#"]').smoothScroll({offset:document.querySelector('#faq') ? 0 : -50, beforeScroll: function(ev){$('.target').removeClass('target'); $(ev.scrollTarget).addClass('target');}, afterScroll: function(ev) {$(ev.scrollTarget).removeClass('target'); var a = $(window).scrollTop(); window.location.hash=ev.scrollTarget; $(window).scrollTop(a);} });
        $('.credit,.milestone,.legend,.phase').popover();
-       $('#progress-link').on('click', function() {
-         $("#progress-details").modal('show');
-         updateProgress();
-         return false;
-       });
        $.stellar({responsive: true, parallaxElements: false, horizontalScrolling: false, positionProperty: 'transform', hideDistantElements: false});
 
        if ($('.faq-list').height() > ($(window).innerHeight() - 140)) {
