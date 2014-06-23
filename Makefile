@@ -8,11 +8,6 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-SSH_HOST=neo900.org
-SSH_PORT=22022
-SSH_USER=dos1
-SSH_TARGET_DIR=/srv/www/htdocs
-
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
 	PELICANOPTS += -D
@@ -27,7 +22,6 @@ help:
 	@echo '   make start [PORT=8000]           start/restart develop_server.sh    '
 	@echo '   make stop                        stop local server                  '
 	@echo '   make build                       generate using production settings '
-	@echo '   make upload                      upload the web site via rsync+ssh  '
 	@echo '                                                                       '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html'
 	@echo '                                                                       '
@@ -51,11 +45,4 @@ stop:
 build:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
-upload: build
-	ln -s /srv/hidden $(OUTPUTDIR)/hidden
-	ln -s /srv/stuff $(OUTPUTDIR)/stuff
-	ln -s /srv/photos $(OUTPUTDIR)/photos
-	cp $(BASEDIR)/mysql_connect.inc.php $(OUTPUTDIR)/
-	rsync -e "ssh -p $(SSH_PORT)" -P -rvz -l --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) --cvs-exclude
-
-.PHONY: html help clean start stop build upload
+.PHONY: html help clean start stop build
