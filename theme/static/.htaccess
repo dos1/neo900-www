@@ -48,5 +48,3 @@ ExpiresByType image/png A6048000
 ExpiresByType text/css A6048000
 
 ErrorDocument 404 /404
-
-Options +Indexes
