@@ -27,11 +27,11 @@
             </div>
             {% endif %}
 
-            {% if article.next_article %}
-            <p style="float: right"><a href="/{{article.next_article.url}}">{{article.next_article.title}} &raquo;</a></p>
+            {% if article.next_article_in_category %}
+            <p style="float: right"><a href="/{{article.next_article_in_category.url}}">{{article.next_article_in_category.title}} &raquo;</a></p>
             {% endif %}
-            {% if article.prev_article %}
-            <p><a href="/{{article.prev_article.url}}">&laquo; {{article.prev_article.title}}</a></p>
+            {% if article.prev_article_in_category %}
+            <p><a href="/{{article.prev_article_in_category.url}}">&laquo; {{article.prev_article_in_category.title}}</a></p>
             {% endif %}
 
             <hr />
