@@ -12,10 +12,10 @@
         <nav id="topmenu">
         <ul class="nav navbar-nav">
         <li><a href="#main" class="neo900 smooth">Neo900</a></li>
+        <li><a href="#news" class="smooth">News</a></li>
         <li><a href="#about" class="smooth">About</a></li>
         <li><a href="#features" class="smooth">Features</a></li>
         <li><a href="#donate" class="smooth">Donate</a></li>
-        <li><a href="#news" class="smooth">News</a></li>
         <!--
         <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -43,53 +43,107 @@
         </div>
     
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div id="main" class="jumbotron" style="z-index: 100; text-align: center;">
-      <div class="container" style="max-width: 80%">
-      <div style="max-width: 700px; margin: 0 auto">
-      <img src="http://static.neo900.org/neo900.png" style="max-width: 100%" />
-      </div>
-      <div style="margin-top: 4%; z-index: 10">
-      <h1>Introducing <span class="neo900">Neo900</span></h1>
-        <p>Finally <strong>the first true successor</strong> to the N900.<br/>
-        Following the FOSS spirit of <strong>Openmoko</strong>.</p>
-        <a class="btn btn-primary btn-lg smooth btn-progress" href="#about">Read more...<!--<div class="btn-progressbar"></div>--></a>
-        <p style="margin-bottom:0; padding:0"><a href="#news" class="smooth text-small">Latest news</a></p>
+    
+    <div id="main" class="jumbotron stripe" style="text-align: center;">
+        <div class="row" style="padding-bottom:0;padding-top:15px">
+            <div class="col-md-6">
+                <img src="/static/neo900-t.png" style="width: 100%" />
+            </div>
+            <div class="col-md-6" style="padding-top: 1.5em">
+             <p style="text-shadow: 0px 0px 5px white">The <strong>truly</strong> open smartphone<br/>that cares about your <strong>privacy</strong>.</p>
+             <a class="btn btn-primary btn-lg smooth" href="#about">Learn more...</a>
+            </div>
         </div>
+    </div>
+    
+    <div class="stripe" style="background-color: rgba(0,0,0,0.01); box-shadow: 0px 0px 5px rgba(0,0,0,0.1); padding:0 ">
+    <div class="row center jumbotron" style="padding: 0.5em">
+    The device is currently <strong>in development</strong>. <span title="Estimate may still change.">Estimated release: <strong>Q4 2014</strong></span>.
+    </div>
+    </div>
+    
+    <div class="jumbotron stripe" style="padding-top: 25px" id="news">
+    
+        <div class="row" style="padding:0">
+            <div class="col-md-6" style="border-right: 1px solid #eee">
+            {% for category in categories if category[0] == 'news' %}
+                <div>
+                    <div style="float: right;">
+                        <a href="/feeds/news.atom.xml" target="_blank"><img src="/static/rss.png" style="vertical-align: bottom"/></a><br/>
+                        <a href="/subscribe" class="btn-subscribe" data-toggle="modal"><img src="/static/mail.png" style="vertical-align: text-top"/></a>
+                    </div>
+                    <h1 style="display: inline-block; color: #555">News</h1>
+                    <div style="display: inline-block; padding-left:15px">
+                        <h4 style="font-weight: bold"><a href="{{ SITEURL }}/{{ category[1][0].url }}">{{ category[1][0].title }}</a></h4>
+                        <p class="text-muted" style="font-size: 0.75em">{{ category[1][0].locale_date }}</p>
+                    </div>
+                    <div style="font-size: 0.75em; max-height: 450px; overflow: hidden; position: relative">
+                        {{ category[1][0].content }}
+                        <p style="margin:0;position: absolute; padding-top: 50px; bottom:0; left:0; width: 100%; text-align: center; background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+                        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
+                        background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+                        background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); 
+                        background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+                        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );"><a href="{{ SITEURL }}/{{ category[1][0].url }}" class="btn btn-lg btn-primary" style="margin: 20px 0;">Read more</a></p>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="col-md-3" style="border-right: 1px solid #eee">
+
+                <h1 style="color: #555">Archive</h1>
+            
+                <div>
+                    <div class="bs-sidebar" style="font-size: 0.75em">
+                        <ul class="nav nav-list bs-sidenav" style="padding: 0px 10px 0 0; max-height: 450px; overflow-y: auto">
+                        {% for post in category[1] %}
+                            <li>
+                                    <h4 style="font-weight: bold"><a href="{{ SITEURL }}/{{ post.url }}">{{ post.title.replace("Neo900 Progress Update","Progress Update") }}</a></h4>
+                                <div class="text-muted" style="text-align: right; font-size: 0.8em; border-bottom: 1px solid #eee; margin-bottom: 5px">
+                                    {{ post.date }}
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            {% endfor %}
+            <div class="col-md-3">
+                <div style="float: right;">
+                    <a href="/feeds/news.atom.xml" target="_blank"><img src="/static/rss.png" style="vertical-align: bottom"/></a><br/>
+                    <a href="http://twitter.com/neo900ug" target="_blank"><img src="/static/twitter.png" style="vertical-align: text-top"/></a>
+                </div>
+                <h1 style="color: #555">µBlog</h1>
+                
+                <div>
+                    
+                    {% for category in categories if category[0] == 'ublog' %}
+                    <div class="bs-sidebar" style="font-size: 0.75em">
+                    <ul class="nav nav-list bs-sidenav" style="padding: 10px 10px 0 0; max-height: 450px; overflow-y: auto">
+                    {% for post in category[1] %}
+                    <li>
+                    <div class="content" style="line-height: 1.5em; word-wrap:break-word">
+                    {{ post.content }}
+                    </div>
+                    <div class="text-muted" style="text-align: right; font-size: 0.8em; border-bottom: 1px solid #eee; margin-bottom: 5px">
+                    <strong>{{ post.author }}</strong>, {{ post.date }}
+                    </div>
+                    </li>
+                    {% endfor %}
+                    </ul>
+                    </div>
+                    {% endfor %}
+                
+            </div>
         </div>
+    </div>
         </div>
-        
-        
-        
-        
-        
-        
-<!--<a target="_blank" class="notice" style="display: block; text-align: center; font-size: 1.5em; background-color: rgba(255,255,0,0.1); box-shadow: 0px 0px 5px rgba(0,0,0,0.1); padding: 5px; font-weight: bold" href="http://ohsw.org/">OHSW - showcasing the first partial prototype! 30. Nov - 1. Dec 2013, Munich, Germany</a>
--->
-<!--<div class="stripe" style="background-color: rgba(255,255,0,0.1); box-shadow: 0px 0px 5px rgba(0,0,0,0.1); padding:0 ">
-<div class="row" style="max-width: 920px">
-<div class="col-md-3"><img src="http://static.neo900.org/video.png" width="100%" style="display: block" /></div>
-<div class="col-md-9" style="padding-left: 3em">
-<h2 style="margin-top: 15px">Our first showcase! <span class="text-muted" style="font-size: 0.75em">Nov 30, 2013</span></h2>
-<p class="lead" style="margin-bottom: 10px">See <strong>the phase I results</strong> on recording from <a href="http://ohsw.org" target="_blank">OHSW</a> <strong>Neo900 talk</strong>!</p>
-<p>You can also watch other <a target="_blank" href="https://www.youtube.com/channel/UCP_U91ipVWsF_2EiG3s6BKA/videos">hardware themed OHSW presentations</a>.<br/><em>The talks are spoken in English and German languages.</em></p>
-<a class="btn btn-primary" href="ohsw2013" target="_blank">Watch on YouTube</a> <a class="btn" href="http://www.openphoenux.org/ohsw2013/7%20Neo900.pdf" target="_blank">See the slides</a>
-</div>
-</div>
-</div>
-        -->
 
-<div class="stripe" style="background-color: rgba(0,0,0,0.01); box-shadow: 0px 0px 5px rgba(0,0,0,0.1); padding:0 ">
-<div class="row center jumbotron" style="padding: 0.5em">
-The device is currently <strong><a href="#news" class="smooth">in development</a></strong>. <span title="Estimate may still change.">Estimated release: <strong>Q4 2014</strong></span>.
-</div>
-</div>
-
-<div class="stripe" style="background-color: rgba(0,0,0,0.01); box-shadow: 0px 0px 5px rgba(0,0,0,0.1); padding:0 ">
-<div class="row center jumbotron" style="padding: 0.5em">
-<a href="/news/spring-cleaning-and-more-news" style="font-weight: bold">Read our latest news about the state of reorganization</a>
-</div>
-</div>
-
+        
         
         <div class="jumbotron stripe" id="about" >
         <div>
@@ -141,7 +195,7 @@ The device is currently <strong><a href="#news" class="smooth">in development</a
         <div class="col-md-7" style="margin-top: -0.5em">
         <p class="lead">
         
-        As a part of the <a href="http://openphoenux.org">OpenPhoenux</a> family, we're commited to provide <strong>the best hacking experience</strong> possible.
+        As a member of the <a href="http://openphoenux.org">OpenPhoenux</a> family, we're commited to provide <strong>the best hacking experience</strong> possible.
         Even if we have no idea how to make use of some feature, <strong>you</strong> might have one and we won't stop you from <strong>implementing it</strong>.</p>
         <p>Our dream is to get <strong>all your crazy needs</strong> covered. You can expect <strong>free, unlocked bootloader</strong>, combined <strong>GPS and GLONASS</strong> navigation system, stereo <strong>line-in</strong> and additional <strong>connection pads</strong> for your own or third party hardware - and those are just the biggest things that we plan to include.</p>
         </p>
@@ -229,124 +283,27 @@ The device is currently <strong><a href="#news" class="smooth">in development</a
     <a target="_blank"  class="credit" href="https://secure.flickr.com/photos/ptrktn/4233596678/" data-toggle="popover" data-trigger="hover" data-placement="left" data-content='"The First Sunrise of 2010" licensed on CC-BY 2.0'>by ptrktn</a>
     <div class="container">
 <h2 class="h1">Donating</h2>
-<p class="center" style="margin: 40px 0 10px">The project is currently <a href="/funds-transfer" style="color: white; text-decoration: underline">in the reorganization</a>.</p>
+<p class="center" style="margin: 40px 0 10px">The transfer of donations from Golden Delicious is <a href="/funds-transfer" style="color: white; text-decoration: underline">progressing</a>.</p>
 <p class="center"><strong>Current state:</strong> 95 donations transferred (18k EUR)</p>
 <p class="center">Please <a href="subscribe" style="color: white; text-decoration: underline" class="btn-subscribe" data-toggle="modal">subscribe to our newsletter</a> to stay informed!</p>
 
-<p class="center" style="margin-top: 40px"><a class="btn btn-primary" href="/donate">Donate</a></p>
+<p class="center" style="margin-top: 2em">We need to reach at least 200 devices to build.<br/>Want to help?</p>
+
+<p class="center" style="margin-top: 40px"><a class="btn btn-lg btn-primary" href="/donate">Donate</a></p>
+
+
+<p class="center" style="font-size:0.75em; margin-top: 2em"><a href="/donate-gdc" style="color: white; text-decoration: underline">Donated previously but haven't transfered yet?</a></p>
 
 </div>
 </div>
     
-
+<div class="jumbotron stripe">
+<div>
+<img src="/static/plan.png" style="width:100%" />
+</div>
+</div>
 
       <!-- /END THE FEATURETTES -->
-
-    <div class="jumbotron sripe op" id="news" style="margin-top: 50px">
-      <div class="container" style="margin-top: -30px">
-<h2 class="h1">News</h2>
-<div class="row">
-<div class="col-md-6">
-
-{% for category in categories if category[0] == 'news' %}
-<div style="float: right; margin-bottom: -10px">
-<a href="/subscribe" class="btn-subscribe" data-toggle="modal"><img src="/static/mail.png" style="vertical-align: baseline"/></a>
-<a href="/feeds/news.atom.xml" target="_blank"><img src="/static/rss.png" style="vertical-align: baseline"/></a>
-</div>
-<h4 class="news-title" style="font-weight: bold"><a href="{{ SITEURL }}/{{ category[1][0].url }}">{{ category[1][0].title }}</a></h4>
-<p class="text-muted news-date" style="font-size: 0.7em">{{ category[1][0].locale_date }}</p>
-
-<div style="font-size: 0.7em">
-
-{{ category[1][0].summary }}
-
-<!-- <p><a href="{{ SITEURL }}/{{ category[1][0].url }}" class="btn btn-primary" style="margin: 20px 0;">Read more</a></p> -->
-
-     </div>
-<hr/>
-
-{% for article in category[1][1:] %}
-<div>
-<h4 class="news-title" style="font-weight: bold"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h4>
-<p class="text-muted news-date" style="font-size: 0.7em">{{ article.locale_date }}</p>
-</div>
-{% endfor %}
-{% endfor %}
-
-<!--<a href="news" class="btn btn-default">More news</a>-->
-</div>
-<div class="col-md-3" style="text-shadow: 0px 0px 20px white;">
-<h3 style="margin-top: 5px">Presence</h3>
-<div class="bs-sidebar" style="font-size: 0.7em">
-<ul class="nav nav-list bs-sidenav">
-
-<li><a target="_blank"  href="http://blogs.fsfe.org/pboddie/?cat=23804">Paul Boddie - Neo900: Turning the corner</a></li>
-
-<li><a target="_blank"  href="http://slashdot.org/story/13/12/02/2246227/neo900-hacker-phone-reaches-minimum-number-of-pre-orders-for-production"> Slashdot - Neo900 Hacker Phone Reaches Minimum Number of Pre-Orders For Production</a></li>
-
-<li><a target="_blank"  href="http://www.wired.com/wiredenterprise/2013/11/neo900/">Wired.com - Out in the Open: The German Plot to Give You Complete Control of Your Phone</a></li>
-<li><a target="_blank"  href="http://www.fastcolabs.com/3021652/an-open-source-phone-thats-completely-unlocked-hardware-too">Co.Labs - An Open Source Phone That’s Completely Unlocked, Hardware Too</a></li>
-<li><a target="_blank"  href="http://slashdot.org/story/13/11/02/1637236/openphoenux-neo900-bills-itself-as-successor-to-nokias-n900"> Slashdot - OpenPhoenux Neo900 Bills Itself As Successor To Nokia's N900</a></li>
-<li><a target="_blank"  href="http://www.phoronix.com/scan.php?page=news_item&px=MTUwMTU"> Phoronix - OpenMoko Might Live On With N900 Phone Base</a></li>
-<li><a target="_blank"  href="https://news.ycombinator.com/item?id=6646448"> Hacker News - Introducing Neo900</a></li>
-<li><a target="_blank"  href="http://blog.slyon.de/2013/11/02/introducing-openphoenux-neo900/"> SlyBlog - Introducing OpenPhoenux Neo900</a></li>
-<li><a target="_blank"  href="http://blogs.fsfe.org/pboddie/?p=430">Paul Boddie - Combining Communities to Create Opportunities</a></li>
-<li><a target="_blank"  href="http://liliputing.com/2013/10/neo900-keeps-nokia-n900-dream-alive-promise-open-hardware.html">Liliputing - Neo900 keeps the Nokia N900 dream alive with promise of open hardware</a></li>
-<li><a target="_blank"  href="http://www.ubergizmo.com/2013/10/neo900-rolls-back-the-years-with-open-hardware/">Ubergizmo - Neo900 Rolls Back The Years With Open Hardware</a></li>
-<li><a target="_blank"  href="http://thedroidguy.com/2013/10/nokia-n900-lives-neo900-able-run-android/">The Droid Guy - Nokia N900 Lives On Through The Neo900, Able To Run Android</a></li>
-
-</ul>
-</div>
-
-</div>
-
-<div class="col-md-3" style="position: relative">
-<div style="float: right; margin-bottom: -10px">
-<a href="http://twitter.com/neo900ug" target="_blank"><img src="/static/twitter.png" style="vertical-align: baseline"/></a>
-<a href="/feeds/ublog.atom.xml" target="_blank"><img src="/static/rss.png" style="vertical-align: baseline"/></a>
-</div>
-{% for category in categories if category[0] == 'ublog' %}
-<h3 style="margin-top: 5px; font-weight: bold">µBlog</h3>
-<div class="bs-sidebar" style="font-size: 0.75em">
-<ul class="nav nav-list bs-sidenav" style="padding: 10px; max-height: 500px; overflow-y: auto; margin-bottom: 20px">
-{% for post in category[1] %}
-<li>
-<div class="content" style="line-height: 1.5em; word-wrap:break-word">
-{{ post.content }}
-</div>
-<div class="text-muted" style="text-align: right; font-size: 0.8em; border-bottom: 1px solid #eee; margin-bottom: 5px">
-<strong>{{ post.author }}</strong>, {{ post.date }}
-</div>
-</li>
-{% endfor %}
-</ul>
-</div>
-{% endfor %}
-
-<h3 style="margin-top: 5px">Social media</h3>
-<div class="bs-sidebar" style="font-size: 0.75em">
-<ul class="nav nav-list bs-sidenav">
-<li><a target="_blank" href="https://facebook.com/neo900">Facebook</a></li>
-<li><a target="_blank"  href="https://plus.google.com/+neo900org">Google+</a></li>
-<li><a target="_blank"  href="https://plus.google.com/u/0/communities/111739819921691335869">OpenPhoenux on Google+</a></li>
-</ul>
-
-</div>
-<h3>Related projects</h3>
-<div class="bs-sidebar" style="font-size: 0.7em">
-<ul class="nav nav-list bs-sidenav">
-<li><a target="_blank"  href="http://talk.maemo.org/showthread.php?t=91308">The Fremantle Porting Task Force</a></li>
-<li><a target="_blank"  href="http://shr-project.org/">SHR</a></li>
-<li><a target="_blank"  href="http://freesmartphone.org">freesmartphone.org</a></li>
-<li><a target="_blank"  href="http://qtmoko.sourceforge.net/">QtMoko</a></li>
-<li><a target="_blank"  href="http://replicant.us/">Replicant</a></li>
-</ul>
-</div>
-
-</div>
-      
-        </div>
-    </div>
 
 
     </div> <!-- /container -->
