@@ -11,6 +11,10 @@
     
     <div class="jumbotron stripe" style="padding-top: 25px" id="news">
     
+        <style>
+            .main-page-hidden { display: none; }
+        </style>
+
         <div class="row" style="padding:0">
             <div class="col-md-6" style="border-right: 1px solid #eee">
             {% for category in categories if category[0] == 'news' %}
@@ -21,18 +25,18 @@
                     </div>
                     <h1 style="display: inline-block; color: #555">News</h1>
                     <div style="display: inline-block; padding-left:15px">
-                        <h4 style="font-weight: bold"><a href="{{ SITEURL }}/{{ category[1][0].url }}">{{ category[1][0].title }}</a></h4>
-                        <p class="text-muted" style="font-size: 0.75em">{{ category[1][0].locale_date }}</p>
+                        <h4 style="font-weight: bold"><a href="{{ SITEURL }}/{{ category[1][1].url }}">{{ category[1][1].title }}</a></h4>
+                        <p class="text-muted" style="font-size: 0.75em">{{ category[1][1].locale_date }}</p>
                     </div>
-                    <div style="font-size: 0.75em; max-height: 450px; overflow: hidden; position: relative">
-                        {{ category[1][0].content }}
+                    <div style="font-size: 0.7em; max-height: 450px; overflow: hidden; position: relative">
+                        {{ category[1][1].content }}
                         <p style="margin:0;position: absolute; padding-top: 50px; bottom:0; left:0; width: 100%; text-align: center; background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
                         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
                         background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
                         background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); 
                         background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
                         background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
-                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );"><a href="{{ SITEURL }}/{{ category[1][0].url }}" class="btn btn-lg btn-primary" style="margin: 20px 0;">Read more</a></p>
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );"><a href="{{ SITEURL }}/{{ category[1][1].url }}" class="btn btn-lg btn-primary" style="margin: 20px 0;">Read more</a></p>
                     </div>
 
                 </div>
@@ -43,7 +47,7 @@
                 <h1 style="color: #555">Archive</h1>
             
                 <div>
-                    <div class="bs-sidebar" style="font-size: 0.75em">
+                    <div class="bs-sidebar" style="font-size: 0.7em">
                         <ul class="nav nav-list bs-sidenav" style="padding: 0px 10px 0 0; max-height: 450px; overflow-y: auto">
                         {% for post in category[1] %}
                             <li>
@@ -69,7 +73,7 @@
                 <div>
                     
                     {% for category in categories if category[0] == 'ublog' %}
-                    <div class="bs-sidebar" style="font-size: 0.75em">
+                    <div class="bs-sidebar" style="font-size: 0.7em">
                     <ul class="nav nav-list bs-sidenav" style="padding: 10px 10px 0 0; max-height: 450px; overflow-y: auto">
                     {% for post in category[1] %}
                     <li>

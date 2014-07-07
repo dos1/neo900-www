@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>July Trilogy, Part I: The Past</title>
+<meta name="date" content="2014-07-07 23:51:15" />
+</head>
+<body>
+<div class="main-page-hidden">
+<p style="font-style: italic; margin-top: 1em">This is the first part of our planned set of three news articles - "The Past", "The Present" and "The Future". It's intended to provide a comprehensive overview over the project's state and plans, for both our long time supporters as well as those who found out about the project only recently. Stay tuned for part two and three getting published during the week.</p>
+<hr/>
+</div>
+
+<p>A lot of important things have happened recently around the project structure. The situation was changing constantly, rendering not only the readers, but even us ourselves confused at times. Now, that the reorganization is completed and things seem to have calmed and stabilized again, it's time to sum everything up.</p>
+
+<h3>Reorganization</h3>
+
+<p>The Neo900 project <a href="http://talk.maemo.org/showthread.php?t=91142#post1369343" target="_blank">has been started</a> by Joerg Reisenweber, former Openmoko EE, based on the idea of developing a similar upgrade for Nokia N900 as GTA04 by Golden Delicious Computers was to Openmoko Neo Freerunner. To make the idea feasible, Joerg approached Dr. H. Nikolaus Schaller from GDC. The work on <a href="http://neo900.org/stuff/neo900-feasibility.pdf" target="_blank">feasibility study</a> and fundraiser started.</p>
+
+<p>The fundraiser went <a href="http://neo900.org/news/weve-reached-our-goal">unexpectedly well</a>, resulting in 76k EUR collected at its end. We promised that every donation starting with 100 EUR will count as a rebate on the price of the device when it's ready, and based our estimations of the number of devices to build on the number of donations eligible to said rebate (with this number being 360).
+All funds had been collected by Golden Delicious Computers. This had its advantages - GDC already had a working shop system, experience with similar projects, and the ability to process credit cards.</p>
+
+<p>Unfortunately, it had its downsides as well. The major disadvantage of GDC being behind the fundraiser was the mismatch of responsibilities. Since the very beginning of the projects, GDC was supposed to take a technical role in the project - designing schematics, drawing PCB layouts, getting prototypes done and maintaining the production. However, the fundraiser in its first shape was legally shifting more responsibilities to the GDC side than anticipated, and it wasn't a true and honest representation of the real situation in the project. That's why we had to fix it - and that's where the problems started.</p>
+
+<p>During that time, we have <a href="http://neo900.org/news/neo900-progress-update-march">reported</a> <a href="http://neo900.org/news/neo900-progress-update-april">a few</a> <a href="http://neo900.org/news/neo900-progress-update-may">times</a> in our progress updates that we had to work on organizational issues. The new company - Neo900 UG - has been created to take the project ownership. The internal distribution of responsibilities has been more or less agreed on, so there was only the money transfer from GDC to Neo900 UG to be done. Unfortunately, due to the way how the German VAT system works and how we did interpret the payments ("pre-orders" vs "donations"), it turned out to be impossible to simply pass project and funds to Neo900 UG.</p>
+
+<p>We tried to come up with a different solution, but each of them turned out to have some flaws that were unacceptable to one of the sides. Finally, after both sides getting frustrated on spending too much time in fruitless organizational discussions instead of real work, GDC <a href="http://talk.maemo.org/showthread.php?p=1425501" target="_blank">announced</a> that it's stepping down from the project and refunding the donations, allowing the Neo900 UG to make a "clean start" and collect the donations once again, now with proper organizational structure that truly represents the reality.</p>
+
+<p>Fortunately, direct transfer of refunds from GDC to Neo900 UG on behalf of the donor turned out to be possible. Neo900 UG soon established <a href="http://neo900.org/donate">means to make "fresh" donations</a> as well. Except of the different legal entity and status of donations, nothing changed from the donors' perspective. Neo900 UG is still honoring the promised benefits of early donations and rules about donations of 100 EUR and more haven't changed. If you haven't transferred your GDC donation to Neo900 UG yet, or you got a refund but would like to donate again (in which case we will still honor the original donation date), you can see the instructions on <a href="http://neo900.org/donate-gdc">our "donate" page</a>.</p>
+
+<p>See <a href="http://lists.goldelico.com/pipermail/gta04-owner/2014-June/005711.html" target="_blank">a summary by Nikolaus</a> about the whole reorganization issue.</p>
+
+<h3>Technical progress</h3>
+
+<p>Before the reorganization, we managed to <a href="http://neo900.org/news/phase-i-results-ohsw-showcase">build</a> <a href="http://projects.goldelico.com/p/neo900/issues/518/" target="_blank">and evaluate</a> <a href="http://neo900.org/news/neo900-progress-update-december">first</a> <a href="http://neo900.org/news/neo900-progress-update-march">prototypes</a> and thanks to a working PHS8 modem on them, started work on <a href="http://git.freesmartphone.org/?p=cornucopia.git;a=summary" target="_blank">a fsogsmd plugin</a>, made some <a href="http://talk.maemo.org/showthread.php?t=93210" target="_blank">first phone calls</a>, and tested the <a href="http://talk.maemo.org/showthread.php?t=93209" target="_blank">GPS/GLONASS functionality</a>.</p>
+<p>Some of the crucial components almost became show-stoppers. The inconspicuous display connector turned out to be very hard to obtain. However, with the great help from the community, we <a href="http://neo900.org/news/neo900-progress-update-march">managed to find and buy them in advance</a>, resolving the nasty problem.</p>
+<p>During the development we even managed to find some great solutions, enhancing the projected device specification with things like <a href="http://projects.goldelico.com/p/neo900/issues/527/" target="_blank">dual-touch gestures support</a>.</p>
+<p>All the work on the prototypes done so far by GDC (including EAGLE project files) <a href="http://neo900.org/stuff/eaglefiles/" target="_blank">has been released</a> on CC-BY-SA 3.0 license.</p>
+<hr/>
+<h4>What's next?</h4>
+<p>We're right now at projected 150 devices to build, which is still under our threshold of 200 devices where production becomes feasible.  However, we're still waiting for GDC donors to respond and choose the fate of their donations.</p>
+<p>After the conclusion of the reorganization, we're back on track with technical work. The specification of the next prototype, making use of the Beagleboard as its brain, but otherwise working as almost complete Neo900 handset, is mostly finished and we're about to ask GDC for a quote for making the prototype.</p>
+<p>To read about these and more details about the current state of the project and plans for future soon, stay tuned for the next parts of this post during this week and don't forget to follow <a href="http://neo900.org/#news">our microblog</a> for real time updates!</p>
+
+</body>
+</html>
