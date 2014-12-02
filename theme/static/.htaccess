@@ -21,9 +21,10 @@ RewriteCond %{SCRIPT_FILENAME}.html -f
 RewriteRule [^/]$ %{REQUEST_URI}.html [QSA,L]
 
 # event redirects
-RewriteRule ^ohsw2013/?$ https://www.youtube.com/watch?v=VWPmXxq1MdQ [R=307,L]
+RewriteRule ^ohsw2013/?$ https://www.youtube.com/watch?v=VWPmXxq1MdQ&list=PL-s0IumBit8PHXpXs7Tp22ymANXSwDrkT [R=307,L]
 RewriteRule ^ohsw2013/slides/?$ http://www.openphoenux.org/ohsw2013/ [R=307,L]
 RewriteRule ^piwo(/(.*))?$ http://neo900.org/stuff/piwo/$2 [R=307,L]
+RewriteRule ^ohsw2014/?$ https://www.youtube.com/watch?v=ahPFCFooBv0&list=PL-s0IumBit8Mofxj0Fn2kH6RB9VtnKS4K [R=307,L]
 
 # pre-pelican redirects
 RewriteRule ^news-0001-fundraising-campain-has-started http://neo900.org/news/neo900-fundraising-campaign-has-started [R=307,L]
