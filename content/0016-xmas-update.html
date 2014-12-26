@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Xmas Update</title>
+<meta name="date" content="2014-12-27 22:48:12" />
+<meta name="author" content="Oksana A. Tkachenko" />
+</head>
+<body>
+
+<p class="lead">A lot has happened since our last newsletter. Let&#39;s sum up the current status of the Neo900 project, donations and technical progress.</p>
+
+<p><em>This update has been put together by our great supporter, Oksana A. Tkachenko. Thanks!</em></p>
+
+<p>Approximating from the number of donors, we&#39;re right now at around 400 devices secured to build.</p>
+
+<p>We have already started to source &quot;risky&quot; parts for board itself, like 1GB RAM and RGB LEDs for keyboard backlight. Risky components are those that are hard to find and/or no longer manufactured and we need to secure them early, in order to avoid nasty surprises later. The RGB LEDs are a tad on the &quot;too expensive&quot; side before we collect funds for sourcing risk parts, since we need 6 side-facing RGB LEDs per board (for keyboard backlight).</p>
+
+<p>So far, we have received around 1000 camera buttons and 70 1GB RAM chips, to evaluate their usability in proto_V2.</p>
+
+<p style="margin: 20px 0">
+<a href="http://neo900.org/stuff/joerg/N9_1GB-RAM/DSC02146.jpeg" rel="lightbox" data-lightbox="p1">
+<img src="http://neo900.org/stuff/joerg/N9_1GB-RAM/DSC02146.jpeg" height="150" />
+</a>
+<a href="http://neo900.org/stuff/joerg/random-media/riskpart_cameraswitch/DSC02154.jpeg" rel="lightbox" data-lightbox="p1">
+<img src="http://neo900.org/stuff/joerg/random-media/riskpart_cameraswitch/DSC02154.jpeg" height="150" />
+</a>
+<a href="http://neo900.org/stuff/joerg/random-media/riskpart_cameraswitch/DSC02155.jpeg" rel="lightbox" data-lightbox="p1">
+<img src="http://neo900.org/stuff/joerg/random-media/riskpart_cameraswitch/DSC02155.jpeg" height="150" />
+</a>
+</p>
+
+<p>We will have 2 BeagleBoards-xM reworked to employ the 1GB RAM PoP to test the chips. We are working for some BB-xM with 1GB RAM to happen before new year, so that we could test our proto_V2 with final memory footprint on beagleboard. Schematics for proto_V2 (to connect to those 1GB beagleboards) have all the subsystems defined already; they will be finalized after the holidays.</p>
+
+<p>We will also test the finger-or-stylus detection in the prototype, connecting surface of resistive touch screen as capacitive electrode to CRTOUCHB10 chip. Accelerometer/magnetometer (BMC150) and gyroscope (BMG160) are changed to <a href="https://www.bosch-sensortec.com/en/homepage/products_3/9_axis_sensors_5/ecompass_2/bmx055_1/bmx055" target="_blank">a single BMX055 chip</a>. We are also looking into feasibility of adding a <a href="http://www.digikey.com/product-detail/en/SI7020-A10-GM1R/336-2539-6-ND/4211733" target="_blank">humidity sensor</a>.</p>
+
+<p>The <a href="http://neo900.org/stuff/eaglefiles/proto_v2/2_2014-12-21/" target="_blank">newest revision for proto_V2 boards</a> has been finished by Nikolaus and is now being reviewed by Joerg and Werner. We do our best to make proto_V2 the best prototype ever built. We aim to get all bugs brushed out <em>before</em> we run a real board spin, to reduce the number of board spins needed, since they are expensive and, for us, take a lot of time. Next step after proto_V2 evaluation will be building of a proto_V3 which might count as a final device already.</p>
+
+<p>Our laboratory has also got augmented by another tool for R&amp;D, a digital oscilloscope: DS1054Z by Rigol.</p>
+
+<p>Werner is regularly updating <a href="http://neo900.org/stuff/block-diagrams/neo900/neo900.html" target="_blank">the interactive block diagram of Neo900</a> and has completed <a href="http://neo900.org/stuff/werner/scans/" target="_blank">3D scans of the N900 case</a>.
+
+<p>Sebastian has given <a href="http://neo900.org/ohsw2014/" target="_blank">the talk titled &quot;Crafting The Private Phone&quot;</a> at <a href="http://ohsw.org/" target="_blank">OHSW2014</a> in the end of November. As usual, video and slides from this talk are available on our <a href="http://neo900.org/resources" target="_blank">resources subpage</a>.</p>
+
+<div style="margin: 10px 0">
+<iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/ahPFCFooBv0?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<p>Last but not least: Happy New Year from the Neo900 team!</p>
+
+</body>
+</html>
