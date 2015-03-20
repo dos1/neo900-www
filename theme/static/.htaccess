@@ -10,6 +10,9 @@ RewriteEngine on
 RewriteCond %{HTTP_HOST} ^www\..*$ [NC]
 RewriteRule ^(.*)$ http://neo900.org/$1 [R=301,L,END]
 
+RewriteCond %{HTTP_HOST} ^.*neo900\.com$ [NC]
+RewriteRule ^(.*)$ http://neo900.org/$1 [R=301,L,END]
+
 RewriteRule ^rss$ /rss.xml [R=301]
 
 RewriteCond %{SCRIPT_FILENAME}/ -d
