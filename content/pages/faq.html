@@ -147,10 +147,15 @@ Fortunately, Neo900 will still support running a 100% free operating system, as 
             
             <h2 id="peripherals">What about peripherals?</h2>
             
-            <p>The WiFi chipset is not set in stone yet, so we're not able to say 
-            right now if it's going to require some firmware file to be loaded into 
-            it. The FLOSS drivers on the Linux side will be available.</p>
-            
+<p>
+The WiFi chipset
+(<a href="http://linuxwireless.sipsolutions.net/en/users/Drivers/wl12xx/">WL1273L</a>)
+will require a binary-only firmware file to be loaded.
+An open-source driver 
+(<a href="http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/drivers/net/wireless/ti/wl12xx">WL12xx</a>) 
+is part of the Linux mainline kernel.
+</p>
+
             <p>We unfortunately cannot provide free baseband modem firmware, 
             as there is no option available on the market which would be able 
             to fulfil this requirement. Even if it existed, it would bring very 
