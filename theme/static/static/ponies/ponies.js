@@ -8,7 +8,7 @@
   function loadScript(src) {
     var sc = document.createElement("script");
     sc.setAttribute('async', 'async');
-    sc.src = "http://static.neo900.org/ponies/"+src;
+    sc.src = "https://static.neo900.org/ponies/"+src;
     var head = document.head || document.getElementsByTagName("head")[0] || document.documentElement;
     head.insertBefore(sc, head.firstChild);
     return sc;
