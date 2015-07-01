@@ -47,10 +47,8 @@ so on of already existing device makes this project economically feasible.</p>
             
             <p>The complete device will be ready-to-use at arrival,
 but please take into account that initially your <a href="#os">operating
-system of choice</a> might be in beta state or even not ready at all.
-Note that Neo900 UG supports community projects to develop or port
-operating systems like Maemo Fremantle in FPTF, but is not involved itself
-in any software development (beyond basic BSP drivers and tools.)
+system of choice</a> might be in beta state or even not ready at all.</p>
+
             <h2 id="cost">How much will it cost?</h2>
             <p>According to
 <a href="estimate.html">current calculations</a>,
@@ -58,31 +56,23 @@ the cost of the motherboard should be somewhere around 990 EUR. The complete dev
 (See also <a href="exchange.html">exchange rate effects</a>.)
             </p>
             
+            <h2 id="donation-interest">How much is my donation (above 100 EUR) worth?</h2>
+            <p>If you made a donation greater than 100 EUR early on in the project you were given a voucher equal to the donated amount when we launched our shop.<br />
+            This amount carry a 2% monthly interest until the day we require the full payment for the device, even if you use the provided voucher before this is asked for.</p>
+            <p>If you donated 100 EUR 2013-11-01 and we ask for full payment by 2015-11-01, your donation would be worth:<br />
+            <strong>148.00 EUR</strong>; 2% monthly interest from original donation * 24 (months)</p>
+            
             <h2 id="buy">When and where can I buy it?</h2>
-<p>
-Slow down! :) We have completed most of the design both at a high level
-as well as down to a considerable degree of detail
-(<a href="http://neo900.org/stuff/block-diagrams/neo900/neo900.html">Block
-diagram</a>,
+            <p>You are now encourraged to place a pre-order with down payment in <a href="https://my.neo900.org/">our shop</a> in order to secure your device!</p>
+            <p>We have reached the stage where we have began to source real hardware for the products (chips, cases, etc.), accept pre-orders and are doing preparations for the production run.<br />
+            Most of the high level design are completed and have come down to a considerable degree of detail (
+<a href="http://neo900.org/stuff/block-diagrams/neo900/neo900.html">Block diagram</a>,
 <a href="http://neo900.org/stuff/papers/ir.pdf">IR</a>,
 <a href="http://neo900.org/stuff/papers/nfc-draft.pdf">NFC</a>,
 <a href="http://neo900.org/stuff/papers/hb.pdf">Hackerbus</a>,
-<a href="http://neo900.org/stuff/eaglefiles/proto_v2/2_2014-12-21/GTA04b7.sch.pdf">schematics</a>)
-and also performed a first set of hardware tests,
-and have reached a stage of this project where we have to make first
-preparations for production.
-</p><p>
-We now need to begin sourcing real hardware for the products (chips,
-cases, etc.), and this is why we opened up a
-<a href="http://neo900.org/shop-letter">shop</a>
-where you can choose your model variant and make real pre-orders.
-</p>
+<a href="http://neo900.org/stuff/eaglefiles/proto_v2/2_2014-12-21/GTA04b7.sch.pdf">schematics</a>
+) and have also performed a first set of hardware tests.</p>
 
-            <!--
-            <h2 id="rebate">How does this "donation rebate" work?</h2>
-            
-            <p>Every donation starting from 100 EUR entitle to a rebate when finally ordering the device. The rebate consists of 100% donated amount and will raise by 2% for each month between donation and start of shipment. E.g. 200 EUR entitle for 204 EUR rebate after 1 full month. This is a bonus for supporting the project upfront.</p>
-            -->
             <h2 id="networks">Which networks will be supported by Neo900?</h2>
             <p>We're going to provide a few modem variants. Consult your network operator to check which option will be the most suitable for you.</p>
             <p><em>Subject to change without prior notice during design evaluation.</em></p>
@@ -140,11 +130,9 @@ Fortunately, Neo900 will still support running a 100% free operating system, as 
             
             <h2 id="floss">What do you mean by "100% Free Software stack"?</h2>
             
-            <p>Not a single line of closed code will have to run on the main CPU to 
-            be able to use the Neo900. With <a href="#gfx">the exception of 3D acceleration</a>, which is not 
-            necessary to operate the device, FLOSS Linux drivers will be available for every single 
-            component. Using free telephony stacks like 
-            <a href="http://freesmartphone.org/">freesmartphone.org</a> or one from <a href="http://qtmoko.sourceforge.net/">QtMoko</a> shouldn't be any problem.</p>
+            <p>Not a single line of closed code will have to run on the main CPU to be able to use the Neo900.<br />
+            Using free telephony stacks like <a href="http://www.freesmartphone.org/">FSO</a> or one from <a href="http://qtmoko.sourceforge.net/">QtMoko</a>, FLOSS Linux drivers will be available for every single component.<br />
+            In order to <a href="#gfx">get 3D acceleration working</a>, which is not necessary to operate the device, closed drivers would be needed.</p>
             
             <h2 id="peripherals">What about peripherals?</h2>
             
@@ -162,7 +150,7 @@ is part of the Linux mainline kernel.
             to fulfil this requirement. Even if it existed, it would bring very 
             little value to the users, as operating a radio device with modified 
             firmware on public networks without recertification is prohibited in 
-            most jurisdictions on the world and privacy concerns in cellular networks
+            most jurisdictions of the world and privacy concerns in cellular networks
             are mostly related to what happens on the network side, not inside the device.</p>  
             
             <h2 id="privacy">Isn't a non-free baseband firmware a privacy issue?</h2>
@@ -179,7 +167,8 @@ is part of the Linux mainline kernel.
             control over the drivers, with a virtual LED to show any modem activity.</p>
                 
             <h2 id="os">Which operating system will be preinstalled?</h2>
-            <p>It's not set in stone yet, but most probably it's going to be basic <a href="http://debian.org/">Debian GNU/Linux</a> image. We won't develop any operating system by ourselves, but we're going to strongly support several community based software projects like <a href="http://talk.maemo.org/showthread.php?t=91308">Fremantle Porting Task Force</a>, <a href="http://shr-project.org/">SHR</a>, <a href="http://freesmartphone.org/">FSO</a>, etc.</p>
+            <p>The device will ship with <a href="https://en.wikipedia.org/wiki/Board_support_package">Linux BSP</a> and possibly an installer to enable the user to download and install a community OS of their choice.<br />
+            We won't develop any operating system by ourselves, but we strongly support several community driven software projects like <a href="http://talk.maemo.org/showthread.php?t=91308">Maemo through the Fremantle Porting Task Force</a>, <a href="http://shr-project.org/">SHR</a>, <a href="http://www.freesmartphone.org/">FSO</a>, etc.</p>
             
             <h2 id="screen">Can't the screen be made bigger?</h2>
             <p>No. A key characteristic of this project is to reuse the N900 case, and it's not possible to make the screen bigger without changing the case. <a href="#case" class="smooth">See also one of the previous answers.</a>
