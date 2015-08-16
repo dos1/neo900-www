@@ -44,6 +44,10 @@ RewriteRule ^news-0009-progress-update-march http://neo900.org/news/neo900-progr
 RewriteRule ^news-0010-progress-update-april http://neo900.org/news/neo900-progress-update-april [R=307,L]
 RewriteRule ^news-0011-progress-update-may http://neo900.org/news/neo900-progress-update-may [R=307,L]
 
+# CCCamp15 presentation redirects
+RewriteRule ^hardware http://neo900.org/stuff/eaglefiles/proto_v2/2_2014-12-21/GTA04b7.sch.pdf [R=307,L]
+RewriteRule ^schematics http://neo900.org/stuff/block-diagrams/neo900/neo900.html [R=307,L]
+
 ExpiresActive On
 ExpiresDefault A604800
 ExpiresByType text/html A300
