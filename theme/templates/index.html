@@ -20,7 +20,7 @@
 
         <div class="row" style="padding:0">
             <div class="col-md-6" style="border-right: 1px solid #eee">
-            {% for category in categories if category[0] == 'news' %}
+            {% for category in categories if category[0]|string() == 'news' %}
                 <div>
                     <div style="float: right;">
                         <a href="/feeds/news.atom.xml" target="_blank"><img src="/static/rss.png" style="vertical-align: bottom"/></a><br/>
@@ -89,7 +89,7 @@
                 
                 <div>
                     
-                    {% for category in categories if category[0] == 'ublog' %}
+                    {% for category in categories if category[0]|string() == 'ublog' %}
                     <div class="bs-sidebar" style="font-size: 0.7em">
                     <ul class="nav nav-list bs-sidenav" style="padding: 10px 10px 0 0; max-height: 400px; overflow-y: auto">
                     {% for post in category[1] %}
