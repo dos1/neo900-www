@@ -2,7 +2,7 @@
 {% block body_params%}data-spy="scroll" data-target="#topmenu" data-offset="70"{% endblock %}
 {% block content_title %}{% endblock %}
 {% block content %}
-    
+
     <div class="stripe" style="background-color: rgba(0,0,0,0.01); box-shadow: 0px 0px 5px rgba(0,0,0,0.1); padding:0 ">
     <div class="row center jumbotron" style="padding: 0.5em">
     This is a <a href="https://my.neo900.org/index.php?id_cms=3&controller=cms&id_lang=1&content_only=1">crowdfunded</a>
@@ -11,9 +11,9 @@
     device for you</a> now!</span>
     </div>
     </div>
-    
+
     <div class="jumbotron stripe" style="padding-top: 25px" id="news">
-    
+
         <style>
             .main-page-hidden { display: none; }
         </style>
@@ -28,13 +28,27 @@
                     </div>
                     <h1 style="display: inline-block; color: #555">News</h1>
                     <div style="height: 450px; max-height: 400px; overflow: hidden; position: relative">
-                        
+
+
+                      <p class="lead" style="margin: 1em 0 0.5em">
+                        After 6 months of PayPal trouble
+                        (see <a href="/news/paypal-trouble-delays-project">previous
+                        article</a>) the situation has been
+                        sorted. Neo900 has resumed buying components for
+                        the upcoming production run.</p>
+                        <p style="text-align: center">
+                                <a href="/news/paypal-resumes-neo900-sources-again" class="btn btn-lg btn-default">Read more</a>
+                        </p>
+
+                        <hr/>
+
+                      </p>
                         <p class="lead" style="margin: 1em 0 0.5em">
 				<a href="http://talk.maemo.org/showthread.php?p=1484864">PayPal trouble</a>
 				delays project.
                         </p>
                         <p style="text-align: center">
-                                <a href="/news/paypal-trouble-delays-project" class="btn btn-lg btn-default">Read more</a> 
+                                <a href="/news/paypal-trouble-delays-project" class="btn btn-lg btn-default">Read more</a>
                         </p>
 
                         <hr/>
@@ -43,9 +57,9 @@
                             The Neo900 project was present at <a href="https://events.ccc.de/camp/2015/wiki/Main_Page">CCCamp2015</a> at <a href="https://events.ccc.de/camp/2015/wiki/Village:Neo">the Neo village</a>.
                             Check out the talks we were giving there at our <a href="/resources">resources page</a>!
                         </p>
-                        
+
                         <p style="text-align: center">
-                                <a href="/news/neo900-on-chaos-communication-camp-2015" class="btn btn-lg btn-default">Read more</a> 
+                                <a href="/news/neo900-on-chaos-communication-camp-2015" class="btn btn-lg btn-default">Read more</a>
                         </p>
 
                         <hr/>
@@ -61,11 +75,11 @@
 
                 </div>
             </div>
-            
+
             <div class="col-md-3 col-sm-6" style="border-right: 1px solid #eee">
 
                 <h1 style="color: #555">Archive</h1>
-            
+
                 <div>
                     <div class="bs-sidebar" style="font-size: 0.7em">
                         <ul class="nav nav-list bs-sidenav" style="padding: 0px 10px 0 0; max-height: 400px; overflow-y: auto">
@@ -81,7 +95,7 @@
                     </div>
                 </div>
             </div>
-            
+
             {% endfor %}
             <div class="col-md-3 col-sm-6">
                 <div style="float: right;">
@@ -89,9 +103,9 @@
                     <a href="http://twitter.com/neo900ug" target="_blank"><img src="/static/twitter.png" style="vertical-align: text-top"/></a>
                 </div>
                 <h1 style="color: #555">µBlog</h1>
-                
+
                 <div>
-                    
+
                     {% for category in categories if category[0]|string() == 'ublog' %}
                     <div class="bs-sidebar" style="font-size: 0.7em">
                     <ul class="nav nav-list bs-sidenav" style="padding: 10px 10px 0 0; max-height: 400px; overflow-y: auto">
@@ -108,36 +122,36 @@
                     </ul>
                     </div>
                     {% endfor %}
-                
+
             </div>
         </div>
     </div>
         </div>
 
-        
-        
+
+
         <div class="jumbotron stripe" id="about" >
         <div>
         <h2 class="h1">The device you've been waiting for</h2>
-        
-        
+
+
         <div class="row featurette">
         <div class="col-md-8" style="margin-top: 8%">
-        
-        
+
+
         <p>Are you tired of all those closed mobile platforms? Do you want to truly own a device that has the ability to do whatever you want, just like your PC?</p>
-        
-        
+
+
         <p>
         The <strong class="neo900">Neo900</strong> project aims to provide a Fremantle (<a href="http://maemo.org/intro/">Maemo&trade; 5</a>) compatible successor to the N900, with a <strong>faster CPU</strong>, <strong>more RAM</strong> and an <strong>LTE modem</strong>. This is all based on a free, mature and stable platform - the <a href="http://gta04.org"><strong>GTA04</strong></a>.
-                
+
         <p>We'll provide complete, <strong><a href="faq#complete">ready-to-use devices</a></strong>, as well as <strong>motherboard replacements</strong> for your current devices.</p>
-                
-                
+
+
         <p>Most importantly, the <span class="neo900">Neo900</span> is an <strong>open platform</strong>, carrying on in the tradition  of the <a href="http://openmoko.org/">Openmoko</a> project.
         <span class="neo900">Neo900</span> will support all operating systems available for GTA04 (<a href="http://qtmoko.sourceforge.net/">QtMoko</a>, <a href="http://shr-project.org/">SHR</a>, <a href="http://debian.org/">Debian</a>, <a href="http://replicant.us/">Replicant</a>, ...) and should serve as a great platform for porting systems like <a href="http://talk.maemo.org/showthread.php?t=91308">Maemo</a>, Ubuntu or Firefox OS - or even for writing your own one!</p>
         <p>We <strong>bring the hardware</strong>, you <strong>choose the operating system</strong>.</p>
-        
+
         <a href="http://talk.maemo.org/showthread.php?t=91142" class="btn btn-default">See the forum thread &raquo;</a>
         </div>
         <div class="col-md-4">
@@ -153,7 +167,7 @@
         </div>
         </div>
         </div>
-        
+
         <div class="stripe jumbotron pcb"  data-stellar-background-ratio="0.25" id="features">
         <a target="_blank"  class="credit" href="https://secure.flickr.com/photos/amagill/2877921712/" data-toggle="popover" data-trigger="hover" data-placement="left" data-content='"JTAG board 1" licensed on CC-BY 2.0'>by Andrew Magill</a>
         <div class="container">
@@ -165,25 +179,25 @@
         </div>
         <div class="col-md-7" style="margin-top: -0.5em">
         <p class="lead">
-        
+
         As a member of the <a href="http://openphoenux.org">OpenPhoenux</a> family, we're committed to provide <strong>the best hacking experience</strong> possible.
         Even if we have no idea how to make use of some feature, <strong>you</strong> might have one and we won't stop you from <strong>implementing it</strong>.</p>
         <p>Our dream is to get <strong>all your crazy needs</strong> covered. You can expect <strong>free, unlocked bootloader</strong>, combined <strong>GPS and GLONASS</strong> navigation system, stereo <strong>line-in</strong> and additional <strong>connection pads</strong> for your own or third party hardware - and those are just the biggest things that we plan to include.</p>
         </p>
-        
+
         <p>We're going to publish <strong>full documentation and schematics</strong> for the device. Although it's not a high-end device with the fastest available components, we believe that thanks to provided freedom, <strong>no planned obsolescence</strong> and ability to easily port new operating systems <span class="neo900">Neo900</span> is going to serve us and our users for a really long time.</p>
         </div></div>
         </div>
         </div>
 
-    
-    
-    
+
+
+
     <div class="jumbotron stripe n900side" id="features2">
     <!-- Example row of columns -->
     <div class="container">
     <p class="center" style="margin-bottom: 20px; text-shadow: 1px 1px 0px rgba(255,255,255,0.5), 0px 0px 10px white, 0px 0px 25px white, 0px 0px 50px white;"><span class="neo900">Neo900</span> will preserve <strong>all the features</strong> of N900... but there's more!</p>
-    
+
     <div class="row">
     <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
@@ -225,14 +239,14 @@
     </div>
     </div>
     <div class="row">
-    
+
     <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
     <h3>GPS and GLONASS</h3>
     <p>Enjoy <strong>increased accuracy</strong> and faster fix times thanks to concurrent support of two navigation standards - American GPS and Russian GLONASS.</p>
     </div>
     </div>
-    
+
     <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
     <h3>Prototyping support</h3>
@@ -251,14 +265,14 @@
     </div>
 
 <div class="jumbotron stripe sunrise" id="donate" data-stellar-background-ratio="0.5">
- <a target="_blank"  class="credit" href="https://secure.flickr.com/photos/ptrktn/4233596678/" data-toggle="popover" data-trigger="hover" data-placement="left" data-content='"The First Sunrise of 2010" licensed on CC-BY 
+ <a target="_blank"  class="credit" href="https://secure.flickr.com/photos/ptrktn/4233596678/" data-toggle="popover" data-trigger="hover" data-placement="left" data-content='"The First Sunrise of 2010" licensed on CC-BY
 2.0'>by ptrktn</a>
  <div class="container">
 
    <h3 style="text-align: center">Want to support the project?</h3>
 
    <p class="center" style="margin-top: 40px"><a class="btn btn-lg btn-primary" href="/donate">Donate now</a></p>
- 
+
  </div>
 </div>
 
