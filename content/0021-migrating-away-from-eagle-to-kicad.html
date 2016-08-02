@@ -89,9 +89,34 @@
        our <a href="https://neo900.org/news/paypal-resumes-neo900-sources-again">last
        communication</a> we noted that <q><strong>Neo900 is the only
        phone that provides a hardware protection from remote activation
-       of the baseband chip</strong></q>.  Therefore this vulnerability
-       that potentially plagues all commercial phones on the planet,
-       won't affect Neo900.</p>
+           of the baseband chip</strong></q>.</p>
+
+    <p>In fact, the GTA0x design of Neo 1973 and Neo FreeRunner, that
+      Neo900 builds upon, contains two unique features:
+      <ul>
+        <li>the modem is detached from the power source, unlike other
+          smartphones, so that the modem has to be authorized by
+          the <abbr>CPU</abbr> before it can perform its tasks.</li>
+        <li>the modem and the CPU <strong>do not share RAM</strong>,
+          which prevents a whole range of attack vectors where a rogue
+          baseband chip, either by design, by "lawful" or illegal
+          action, could take control of memory segments pertaining to
+          other subsystems and inject malicious code.</li>
+      </ul>
+      Thanks to this design, the <abbr>CPU</abbr> has the capacity to monitor:
+      <ul>
+        <li>the modem access to power and its consumption</li>
+        <li>the activity of the modem antenna</li>
+        <li>the activation of the
+          <abbr title="Global Positioning System">GPS</abbr>
+          part of the modem</li>
+        <li>other interfaces (e.g., digital
+          <abbr title="Pulse-Code Modulation">PCM</abbr> audio</li>
+      </ul>
+    </p>
+
+    <p>Therefore this vulnerability that potentially plagues all
+       commercial phones on the planet, won't affect Neo900.</p>
 
     <p>Our exclusive Neo900 design is more valuable than ever!</p>
 
