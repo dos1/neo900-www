@@ -91,8 +91,9 @@
        phone that provides a hardware protection from remote activation
            of the baseband chip</strong></q>.</p>
 
-    <p>In fact, the GTA0x design of Neo 1973 and Neo FreeRunner, that
-      Neo900 builds upon, contains two unique features:
+    <p id="anchor-gta0x">In fact, the
+      <a href="#note-gta0x"><strong>GTA0x</strong> design</a>
+      contains two unique features:
       <ul>
         <li>the modem is detached from the power source, unlike other
           smartphones, so that the modem has to be authorized by
@@ -103,7 +104,8 @@
           action, could take control of memory segments pertaining to
           other subsystems and inject malicious code.</li>
       </ul>
-      Thanks to this design, the <abbr>CPU</abbr> has the capacity to monitor:
+      Neo900 takes advantage of this and incorporates circuitry to
+      give the <abbr>CPU</abbr> the capacity to monitor:
       <ul>
         <li>the modem access to power and its consumption</li>
         <li>the activity of the modem antenna</li>
@@ -115,8 +117,20 @@
       </ul>
     </p>
 
-    <p>Therefore this vulnerability that potentially plagues all
-       commercial phones on the planet, won't affect Neo900.</p>
+    <p>Therefore this vulnerability that potentially plagues most
+       commercial phones on the planet, won't affect Neo900 like it
+       will other devices. A rare combination of hardware
+       vulnerability in the USB connecting the modem to the CPU and a
+       software vulnerability would have a remote chance to do
+       that. In other designs where RAM is shared and a rogue modem
+       can access the power supply at will, the attack surface is
+       infinitely larger, and exploiting a vulnerability such as the
+       ASN.1 bug will grant access to the whole system. As long as
+       there's no proprietary vulnerable binary blobs in the
+       Neo900 <abbr title="Application Processor
+       Environment">APE</abbr>, the chance of a modem bug bubbling up
+       to the rest of the system without a way to control it and fix
+       it in software remains null.</p>
 
     <p>Our exclusive Neo900 design is more valuable than ever!</p>
 
@@ -244,6 +258,12 @@
       What else should it have covered?  What do you want to read in the
       news?  You can tell me: hellekin at neo900 dot org, or in the
       comments.</p>
+
+    <p id="note-gta0x" class="footnote">Footnote: from Openmoko Neo
+      1973 and FreeRunner, to Golden Delicious GTA04 and maybe the
+      upcoming Pyra, and of course Neo900, GTA0x design supports modem
+      separation, although not power separation in Neo
+      1973. <a href="#anchor-gta0x" title="back to text">^^</a></p>
 
 </body>
 </html>
