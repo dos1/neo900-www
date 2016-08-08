@@ -1,3 +1,47 @@
+<!-- pelican??? -->
+<p>Migrating away from Eagle, to KiCad</p>
+<p class="lead">Mon 08 August 2016 04:02:31 The Neo900 team decided to move away from proprietary software Eagle and converted its schematics production to the KiCad open-source Electronics Design Automation (<abbr title="Electronics Design Automation">EDA</abbr>) suite.</p>
+<h2>Contents</h2>
+<p>Before jumping to our main feature on KiCad, let's review Neo900 project updates since June.</p>
+<ol>
+<li><a href="#server-migrated">Neo900.org Server Migrated</a></li>
+<li><a href="#more-n900-sourcing">More N900 Sourcing</a></li>
+<li><a href="#neo900-whitepapers">Whitepapers Update</a></li>
+<li><a href="#feature">From Eagle to KiCad</a></li>
+</ol>
+<h3 id="server-migrated">Neo900.org Server Migrated</h3>
+<p>Last week we completed the migration of Neo900.org services, including <a href="https://my.neo900.org/">Neo900 Shop</a> to a new server. The old one was running out of space, and dangerously approaching capacity, especially when <a href="https://en.wikipedia.org/wiki/Slashdot_effect">slashdotted</a>.</p>
+<p>If you encounter any problems with the new server, please <a href="mailto:contact@neo900.org?Subject=Neo900.org%20Services%20Issue">report them</a>!</p>
+<h3 id="more-n900-sourcing">More N900 Sourcing</h3>
+<p>After dowsing for a while, our boots in China confirmed the source mentioned previously! We already received 20 more N900 units responding to our quality criteria for enduring the metamorphosis into brand new Neo900 units for you lucky (and patient) early birds. 20 more units are on the way, and we expect more to come. We're already at 70 units and counting.</p>
+<p>Again, if you know where to find some affordable stocks of N900 units, please <a href="mailto:contact@neo900.org?Subject=N900%20Stock">contact us</a>!</p>
+<h3 id="neo900-whitepapers">Whitepapers Update</h3>
+<p>While we're at it, and to continue building momentum for our <a href="#feature">main feature</a> today, like if you were too early at the movies, let's have a look at what our mad scientists concocted since last June.</p>
+<p>...</p>
+<p>You can always follow our whitepapers updates directly from Werner in the <a href="http://talk.maemo.org/showthread.php?t=93498">Neo900 Announcements</a> thread on talk.maemo.org, and access the whole up-to-date whitepaper collection from the <a href="https://neo900.org/resources">Resources section</a> at neo900.org.</p>
+<p>And now, without further ado, our main feature!</p>
+<h3 id="feature">From Eagle to KiCad</h3>
+<p>When Joerg took charge of the Neo900 project, the electronics design was made with Eagle, and was updated using that tool ever since. Nikolaus Schaller was the Eagle virtuoso, with his own homegrown set of Eagle extensions to empower Eagle to cope with the demanding task at hand, but the tools and workflow associated with Eagle plus extensions same time didn't allow for collaborative editing of the schematics and layout.</p>
+<p>In 2016, Nikolaus faded away from Neo900, absorbed by the finishing touch to our cousin project <a href="https://pyra-handheld.com">Pyra</a>. Just a few weeks ago he confirmed that he couldn't follow up on the layout for Neo900, which prompted Joerg and Werner to consider alternatives.</p>
+<p>In the <abbr title="Electronics Design Automation">EDA</abbr> market, besides Eagle, there's Altium. But Altium, though probably powerful enough for the task at hand, has the same flaw as Eagle: it's proprietary, and moreover, it's quite expensive. Our rationalizing mind wants to say there's cognitive dissonance in using non-free software for a free hardware project. And in hindsight, this sounds like a good rationalization.</p>
+<p>Among the open-source alternatives to Eagle, <a href="http://fritzing.org/">Fritzing</a> didn't match our need for multilayer board support; between <a href="http://geda-project.org/">gEDA</a> and <a href="http://kicad-pcb.org/">KiCad</a>, the choice was easy: the latter is much more powerful and popular, backed up by <abbr title="Centre Europ&eacute;en de Recherche
+      Nucl&eacute;aire">CERN</abbr> as part of the <a href="http://home.cern/about/updates/2015/02/kicad-software-gets-cern-treatment">Open Hardware Initiative</a>, and the community is more active.</p>
+<h4>How does the move to KiCad influence Neo900 development?</h4>
+<p>The only major downside comes from the reduced access to Nikolaus' <abbr title="Open Multimedia Applications
+      Platform">OMAP</abbr> know-how, although we hope he will be able to review our work. On the other hand, we're no longer slowed down by uncertainty with regard to the future role of Golden Delicious in Neo900: this used to cause change requests to pile up, and we used white papers as a means of documenting what we couldn't change in the schematics in a timely manner.</p>
+<p>That gives us wings: with KiCad, we can now provide a more transparent development process and can now operate in a more schematics-centric mode, using white papers only where something actually needs explaining.</p>
+<p>We found out that KiCad's routing capabilities are superior to Eagle's:</p>
+<figure><iframe src="https://www.youtube.com/embed/CCG4daPvuVI" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe> <figcaption> <a href="https://www.youtube.com/watch?v=CCG4daPvuVI">Demo of the KiCad router</a> </figcaption></figure>
+<p>Moving to KiCad proved to be quite an <a href="https://www.youtube.com/watch?v=d5oO6fiyB7o">improvement over that</a>.</p>
+<h4>What's the progress on converting Neo900 schematics from Eagle to KiCad?</h4>
+<p>Progress is surprisingly fast. We already completed the bulk of the conversion, and are now fixing bugs (some discovered during the conversion, and <a href="https://bugs.launchpad.net/kicad/+bug/1154131/comments/9">also in KiCad</a>.)</p>
+<p>In the coming weeks we're going to work on incorporating material <em>parked</em> in whitepapers (see above), [maybe leave that alone for now:] define the BB-mX interface for prototype v2 (...)</p>
+<p>Being able to put our schematics under version control moves us away from the Stone Age, into the present. You can watch the evolving contents in our <a href="https://neo900.org/git/?p=ee;a=tree">eletronics engineering Git repository</a>. Werner already developed an as far as we know industry unique graphical schematics diff tool to make real good use of our version control. This little gem is not only valuable for us but also been much appreciated in the KiCAD community at large and will possibly gain us a bonus when it comes to needing help from the kicad developers to fix an issue we might encounter in KiCAD while doing the layout.</p>
+<p>Thank you for your attention,</p>
+<p>&ndash; hellekin for the Neo900 team</p>
+<p>P.S.: Feedback is welcome! Did you enjoy reading this post? What else should it have covered? What do you want to read in the news? You can tell me: hellekin at neo900 dot org, or in the comments.</p>
+
+OLD VERSION BELOW
 <!DOCTYPE html>
 <html>
   <head>
