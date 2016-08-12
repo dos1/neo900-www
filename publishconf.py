@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'http://neo900.org'
+SITEURL = 'https://neo900.org'
 RELATIVE_URLS = False
 
 DELETE_OUTPUT_DIRECTORY = True

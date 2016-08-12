@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'neo900'
 SITENAME = u'Neo900'
-SITEURL = 'http://neo900.org'
+SITEURL = 'https://neo900.org'
 
 TIMEZONE = 'Europe/Warsaw'
 
@@ -14,7 +14,7 @@ DEFAULT_LANG = u'en'
 FEED_RSS = 'rss.xml'
 TRANSLATION_FEED_ATOM = None
 
-IGNORE_FILES = ['.*.kate-swp']
+IGNORE_FILES = ['.*.kate-swp','*~','.*~']
 
 DEFAULT_PAGINATION = 0
 
@@ -38,5 +38,7 @@ ARTICLE_SAVE_AS = "news/{slug}.html"
 PAGE_URL = "{slug}"
 PAGE_SAVE_AS = "{slug}.html"
 
-PLUGIN_PATH = 'plugins'
+PLUGIN_PATHS = ['plugins']
 PLUGINS = ['neighbors']
+
+TWITTER_USERNAME = "Neo900UG"
