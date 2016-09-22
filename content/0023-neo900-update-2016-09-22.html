@@ -2,100 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Finally the first true successor to the N900. The Neo900 project aims to provide a Fremantle (Maemo™ 5) compatible successor to the N900, with a faster CPU, more RAM and an LTE modem. Following the FOSS spirit of Openmoko.">
     <meta name="author" content="Sebastian Krzyszkowiak">
-    <meta name="robots" content="index, follow">
     <meta name="date" content="2016-09-22">
-    <link rel="shortcut icon" href="/favicon.ico">
-
     <title>September 2016 Update - Neo900</title>
-    <link href="https://neo900.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Neo900 Full Atom Feed" />
-    <link href="https://neo900.org/rss.xml" type="application/rss+xml" rel="alternate" title="Neo900 RSS Feed" />
-    <link href="https://neo900.org/feeds/news.atom.xml" type="application/atom+xml" rel="alternate" title="Neo900 Categories Atom Feed" />
-    
-    <!-- Bootstrap core CSS -->
-    <link href="/static/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-    <link href="/css/neo900.css?v14" rel="stylesheet">
-    <link href="/css/lightbox.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="/js/html5shiv.js"></script>
-      <script src="/js/respond.min.js"></script>
-    <![endif]-->
-
   </head>
 
   <body >
-
-    <div class="modal fade" id="subscribe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form action="/subscribe.php" method="POST" id="subscription">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Want to be constantly informed about <strong class="neo900">Neo900</strong> progress?</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>Type your e-mail address:<br/><input type="email" name="neo900-mail" required="required" class="form-control" /></p>
-                        <p>Alternatively you can use our <a href="/rss">RSS</a>, <a href="http://facebook.com/neo900">Facebook</a>, <a href="http://twitter.com/neo900ug">Twitter</a> or <a href="https://plus.google.com/101237791266469792395/posts">Google+</a> feeds.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <input type="submit" class="btn btn-lg btn-primary" value="Subscribe" />
-                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Close" />
-                    </div>
-                </form>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div class="navbar navbar-default" data-spy="affix" data-offset-top="10">
-        <div class="container">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <div class="navbar-collapse collapse">
-                <nav id="topmenu">
-                    <ul class="nav navbar-nav">
-                        <li><a href="/#main" class="neo900 smooth">Neo900</a></li>
-                        <li><a href="/#news" class="smooth">News</a></li>
-                        <li><a href="/#about" class="smooth">About</a></li>
-                        <li><a href="/#features" class="smooth">Features</a></li>
-<!--                        <li><a href="/#donate" class="smooth">Donate</a></li>-->
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/faq">FAQ</a></li>
-                        <li><a href="/specs">Specs</a></li>
-                        <li><a href="/resources">Resources</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                        <li><a href="https://my.neo900.org/">Shop</a></li>
-                        <li><a href="/subscribe" class="btn-subscribe" data-toggle="modal">Newsletter</a></li>
-                    </ul>
-                </nav>
-            </div><!--/.navbar-collapse -->
-        </div>
-    </div>
-    
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    
-    <div id="main" class="jumbotron stripe" style="text-align: center;">
-        <div class="row" style="padding-bottom:0;padding-top:15px">
-            <div class="col-md-6 col-sm-6">
-                <img src="/static/neo900-t.png" style="width: 100%" />
-            </div>
-            <div class="col-md-6 col-sm-6" style="padding-top: 1.5em">
-             <p style="text-shadow: 0px 0px 5px white">The <strong>truly</strong> open smartphone<br/>that cares about your <strong>privacy</strong>.</p>
-             <a class="btn btn-primary btn-lg smooth" href="/#about">Learn more...</a>
-            </div>
-        </div>
-    </div>
-    
 
     <div class="stripe">
         <div>
@@ -103,7 +15,7 @@
             <h2 class="news-title">September 2016 Update</h2>
             <p class="text-muted news-date">Sep 22, 2016, hellekin</p>
 
-            <p :=":" class="lead">On our way to <code>proto_v2</code> layout!  Schematics are rolling with Eeshow.
+            <p class="lead">On our way to <code>proto_v2</code> layout!  Schematics are rolling with Eeshow.
 Reaching out and European hacker events.</p>
 <h2>Neo900 v2 Prototype</h2>
 <p>Recently we received 15+ BeagleBoard-xM to serve each as a virtual
@@ -162,95 +74,5 @@ you have ideas and motivation to bring in more people, you're welcome!</p>
 
         </div>
     </div>
-
-
-
-    <div id="footer">
-      <div class="container">
-        <p class="text-muted credit">
-        <strong>CC-BY-SA 3.0</strong> Neo900. <a href="/impressum">Impressum</a>. Project by <a href="http://handelsregister-online.net/neueintragung.cfm?cn=3966641" target="_blank">Neo900 UG</a> in cooperation with <a target="_blank" href="http://goldelico.com/">Golden Delicious Computers GmbH &amp; Co. KG</a>.<br/>
-        Site created by <a target="_blank"  href="http://dosowisko.net/">Sebastian Krzyszkowiak</a>. All trademarks are the property of their respective owners.</p>
-      </div>
-    </div> <!-- /footer -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/static/jquery.min.js"></script>
-    <script src="/static/jquery.smooth-scroll.min.js"></script>
-    <script src="/static/jquery.stellar.min.js"></script>
-    <script src="/static/bootstrap.min.js"></script>
-    <script src="/static/ponies/ponies.js"></script>
-    <script src="/js/lightbox-2.6.min.js"></script>
-    <script>
-     $(function() {
-       var $form = $('#subscription');
-       var submited = false;
-       $form.on('submit', function(e) {
-         if (submited) return false;
-         submited = true;
-         $form.find('input[type=submit]').fadeOut(500);
-         $form.find('.modal-body').slideUp(500);
-         $.post('/subscribe.php', "neo900-mail="+encodeURIComponent($form.find('input[type=email]').val()), function(txt) {
-           $("<p class=\"modal-body info\"></p>").text(txt).insertAfter($form.find('.modal-body')).hide().slideDown(500);
-         }, "text").fail(function() {
-           $("<p class=\"error modal-body info\">Unexpected error on subscribing.<br/>Please try again later.</p>").insertAfter($form.find('.modal-body')).hide().slideDown(500);
-         });
-         e.preventDefault();
-         return false;
-       });
-
-       $('.btn-subscribe').on('mousedown',function(e) {
-         $(this).attr('href','#subscribe');
-       }).on('click', function(e) {
-         $form.find('.modal-body.info').remove();
-         $form.find('input[type=submit]').show();
-         $form.find('.modal-body').show();
-         submited = false;
-       });
-
-       if (window.location.hash === '#subscribe') {
-         $('.btn-subscribe').attr('href','#subscribe').trigger('click').attr('href','/subscribe');
-       }
-
-       $('.faq-list').affix({
-         offset: {
-           top: function () {
-             return (this.top = $('#faq').offset().top-10)
-           }
-         }
-       });
-
-       $('a.smooth[href^="#"]').smoothScroll({offset:document.querySelector('#faq') ? 0 : -50, beforeScroll: function(ev){$('.target').removeClass('target'); $(ev.scrollTarget).addClass('target');}, afterScroll: function(ev) {$(ev.scrollTarget).removeClass('target'); var a = $(window).scrollTop(); window.location.hash=ev.scrollTarget; $(window).scrollTop(a);} });
-       $('.credit,.milestone,.legend,.phase').popover();
-       $.stellar({responsive: true, parallaxElements: false, horizontalScrolling: false, positionProperty: 'transform', hideDistantElements: false});
-
-       if ($('.faq-list').height() > ($(window).innerHeight() - 140)) {
-         $(window).off('.affix');
-         $('.faq-list').removeClass('affix');
-       }
-     });
-    </script>
-
-    <!-- Piwik -->
-    <script type="text/javascript">
-      var _paq = _paq || [];
-      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-      _paq.push(["setCookieDomain", "*.neo900.org"]);
-      _paq.push(["setDomains", ["*.neo900.org"]]);
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="//dosowisko.net/analytics/piwik/";
-        _paq.push(['setTrackerUrl', u+'piwik.php']);
-        _paq.push(['setSiteId', 1]);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-      })();
-    </script>
-    <noscript><p><img src="//dosowisko.net/analytics/piwik/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-    <!-- End Piwik Code -->
-
   </body>
 </html>
