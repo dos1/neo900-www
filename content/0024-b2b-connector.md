@@ -3,7 +3,7 @@ Date:     2016-10-19
 Category: news
 Author:   hellekin
 Slug:     neo900-b2b-connectors-vs-the-tombstone-effect
-Tags:     b2b connectors, labs, tombstone
+Tags:     b2b connectors, disco, tombstone
 
 There is software.  There is hardware.  There is nightmare.  When
 electronics engineering makes you lose sleep.  A venture into the
@@ -56,51 +56,47 @@ and homegeneity.
 
 In the prototype phase, you would resolder the faulty component and
 that would take a few hours at most.  But in production, this type of
-event can ruin the batch.  Fortunaly it's not as scary as it sounds:
+event can ruin the batch.  Fortunately it's not as scary as it sounds:
 production lines are aware of this problem and machines usually do the
-job correctly.  Nevertheless it requires some special attention,
-especially for Neo900 since UPPER-LOWER connectors don't have any
-positioning aids, and still need (almost) perfect alignment.
+job correctly.  The tombstone effect is not what bothers our beloved
+engineers though--I was just being spooky: it only illustrates an
+extreme case of this _floating component_ effect that can makes them
+drift from their position.
 
-Several options are under consideration:
+In Neo900 case, the issue is to place the board connectors between
+UPPER and LOWER in a way that will have them clip perfectly into
+place.  B2B connectors are much bigger than say, a transitor, so the
+dreaded effect is just a boring annoyance that requires some special
+attention.  On the other hand, being like long Lego bricks, a little
+angle may result in a comparable result: no connection.
 
-- We could go for a Nokia-style FPC sandwich and use that to connect
-  both boards.  As we care for your users, we would double this with a
-  row of pads on the PCB next to the FPC connection, so that in case
-  the FPC breaks, you could still fix the connection by soldering a
-  new connecting 'cable' to these pads.  With extra care, we could opt
-  for thermal vias under each of the B2B connection pads, so the
-  connection could get 'reflowed' through the PCB.
-
-  What to do then, with this complete batch of paperweight PCBAs that
-  don't mate each other?  We need to ponder if we can at least glue
-  the connections into place before reflow, so they won't move away in
-  arbitrary directions.
-
-- Or, we could use a fixation to keep the [B2B connectors] in the
-  desired relative position to each other during reflow.  The fixation
-  would take the form of some kind of 'gold master' to precisely
-  position the two B2B counterparts, glued into place.  For both UPPER
-  and LOWER we would need as many of these 'gold master' fixations as
-  we want PCBs getting reflowed concurrently.  The component place
-  engines are of known precision and the glue won't allow the
-  connections to float/drift after placing them.  That approach looks
-  promising, but the prospect of negotiating such workflow with the
-  fab sounds nightmarish: if gluing is common, adding a temporary
-  mechanical component to keep things aligned may not be so.
+Several options are under consideration.  B2B connectors come in
+different forms and with a variety of features, ranging from no
+positioning aids to full stability.  An alternate solution to
+fully-place-able connectors consists in creating a 'gold master'
+fixation that matches the board and desired relative positions of the
+B2B connectors, and glue that temporarily to the board before
+reflowing: that way we can ensure mechanically that the connectors
+will clip like Lego bricks.  This however would require extra work for
+the lab...
 
 Here, a small insight into the complexity of research & development,
 and how it goes way beyond simple puzzle solving: sometime venturing
-into puzzle design can be puzzling.  Bottom-line: at this scale
-details matter!
+into puzzle design can be puzzling.  EE is not only electronics: the
+mechanical constraints and market constraints come into play more
+often than not.  Bottom-line: at this modest scale details matter!
 
+Thank you for your attention,
+
+hellekin for Neo900 Team.
 
 *[B2B]: Board to Board
 *[ECM]: Electro-Mechanical Migration
 *[EE]: Electronics Engineering
 *[FPC]: Flexible Printed Circuit
 *[PCB]: Printed Circuit Board
-*[TLA]: Three Letter Acronym
+*[SMD]: Surface-Mounted Device
+ *[TLA]: Three Letter Acronym
 
 [B2B connectors]: http://www.hirose.co.jp/cataloge_hp/ed_DF40_20140305.pdf
 [reflow]: https://electronics.stackexchange.com/questions/27573/why-and-when-to-use-reflow-soldering
