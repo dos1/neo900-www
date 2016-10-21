@@ -101,7 +101,7 @@ City--it would take a serious amount of unluck to 'grow' several
 capacitors at once).
 
 Joerg wanted to explain to me the problematic of using B2B connectors
-between UPPER and LOWE boards.  The case is different from either the
+between UPPER and LOWER boards.  The case is different from either the
 exploding batteries and the tombstone effect, as the connectors are
 rather large components.  Yet, their relative alignment on the board
 require a precision of about 0.2 mm so they can clip in easily.
