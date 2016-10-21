@@ -1,5 +1,5 @@
 Title:    Neo900 Board-to-Board Connectors vs. the Tombstone Effect
-Date:     2016-10-19
+Date:     2016-10-21
 Category: news
 Author:   hellekin
 Slug:     neo900-b2b-connectors-vs-the-tombstone-effect
