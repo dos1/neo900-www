@@ -50,7 +50,7 @@
 
   </head>
 
-  <body {% block body_params %}{%endblock%}>
+  <body{% if body_params %} {{ body_params }}{% endif %}>
 
     <div class="modal fade" id="subscribe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">

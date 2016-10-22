@@ -38,7 +38,7 @@ ARTICLE_SAVE_AS = "news/{slug}.html"
 PAGE_URL = "{slug}"
 PAGE_SAVE_AS = "{slug}.html"
 
-PLUGIN_PATHS = ['plugins']
+PLUGIN_PATHS = ['plugins','../pelican-plugins']
 PLUGINS = ['neighbors']
 
 TWITTER_USERNAME = "Neo900UG"
