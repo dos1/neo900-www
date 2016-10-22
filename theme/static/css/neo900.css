@@ -697,6 +697,9 @@ a.link-inverted {
   margin-bottom: 10px;
 }
 
-body.disco div.stripe>div {
+body.disco .stripe > div {
     max-width: 48rem;
+}
+body.disco .jumbotron.stripe > div {
+    max-width: 100%;
 }
