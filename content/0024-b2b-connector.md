@@ -1,9 +1,10 @@
-Title:    Neo900 Board-to-Board Connectors vs. the Tombstone Effect
-Date:     2016-10-21
-Category: news
-Author:   hellekin
-Slug:     neo900-b2b-connectors-vs-the-tombstone-effect
-Tags:     b2b connectors, disco, tombstone
+Title:      Neo900 Board-to-Board Connectors vs. the Tombstone Effect
+Date:       2016-10-22
+Category:   news
+Author:     hellekin
+Slug:       neo900-b2b-connectors-vs-the-tombstone-effect
+Tags:       b2b connectors, disco, tombstone
+body_attrs: class="disco"
 
 There is software.  There is hardware.  There is nightmare.
 Hellekin's venture into the scary world of Tombstone.
