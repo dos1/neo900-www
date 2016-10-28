@@ -14,7 +14,7 @@ DEFAULT_LANG = u'en'
 FEED_RSS = 'rss.xml'
 TRANSLATION_FEED_ATOM = None
 
-IGNORE_FILES = ['.*.kate-swp','*~','.*~']
+IGNORE_FILES = ['.*.kate-swp','*~','.*~','.#*']
 
 DEFAULT_PAGINATION = 0
 

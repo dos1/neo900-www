@@ -703,3 +703,32 @@ body.disco .stripe > div {
 body.disco .jumbotron.stripe > div {
     max-width: 100%;
 }
+
+main {
+    max-width: 96rem;
+}
+main > article {
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+body.weekly.news div.stripe {
+    max-width: 96rem;
+}
+body.weekly.news div.stripe > div {
+    max-width: 48rem;
+    margin: 0 auto;
+}
+body.weekly.news div.jumbotron.stripe {
+    max-width: 100%;
+}
+
+
+:target {
+    padding-top: 6rem;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+}
