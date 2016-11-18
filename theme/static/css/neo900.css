@@ -714,8 +714,9 @@ main > article {
 
 body.weekly.news div.stripe {
     max-width: 96rem;
+    margin: 0 auto;
 }
-body.weekly.news div.stripe > div {
+body.weekly.news div:not(.jumbotron).stripe > div {
     max-width: 50rem;
     margin: 0 auto;
 }
