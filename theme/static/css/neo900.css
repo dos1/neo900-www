@@ -714,11 +714,25 @@ main > article {
 
 body.weekly.news div.stripe {
     max-width: 96rem;
-}
-body.weekly.news div.stripe > div {
-    max-width: 48rem;
     margin: 0 auto;
 }
+body.weekly.news div:not(.jumbotron).stripe > div {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1600px) {
+    body.weekly.news div:not(.jumbotron).stripe {
+	max-width: 90%;
+	-webkit-column-count: 3; /* Chrome, Safari, Opera */
+	-moz-column-count: 3; /* Firefox */
+	column-count: 3;
+	-webkit-column-gap: 4rem; /* Chrome, Safari, Opera */
+	-moz-column-gap: 4rem; /* Firefox */
+	column-gap: 4rem;
+    }
+}
+
 body.weekly.news div.jumbotron.stripe {
     max-width: 100%;
 }
