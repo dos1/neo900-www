@@ -32,8 +32,8 @@ SUMMARY_MAX_LENGTH = 10000
 DEFAULT_DATE_FORMAT = '%b %d, %Y'
 LOCALE = 'C'
 
-ARTICLE_URL = "news/{slug}"
-ARTICLE_SAVE_AS = "news/{slug}.html"
+ARTICLE_URL = "{category}/{slug}"
+ARTICLE_SAVE_AS = "{category}/{slug}.html"
 
 PAGE_URL = "{slug}"
 PAGE_SAVE_AS = "{slug}.html"
