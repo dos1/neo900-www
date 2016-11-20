@@ -704,11 +704,16 @@ body.disco .jumbotron.stripe > div {
     max-width: 100%;
 }
 
-body:not(.faq) main {
+body:not(.faq):not(.specs) main {
     max-width: 96rem;
 }
-body:not(.faq) main > article {
+body:not(.faq):not(.specs) main > article {
     max-width: 48rem;
+    margin: 0 auto;
+}
+
+body.specs main > article {
+    max-width: 96rem;
     margin: 0 auto;
 }
 
