@@ -8,7 +8,7 @@ body_params:  class="disco"
 
 There is software.  There is hardware.  There is nightmare.
 Hellekin's venture into the scary world of Tombstone.
-{: .lead :}
+{: .lead}
 
 ## How to Connect Boards and Live with it
 

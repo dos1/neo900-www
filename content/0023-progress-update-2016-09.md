@@ -5,7 +5,7 @@ Slug:     neo900-update-2016-09-22
 
 On our way to `proto_v2` layout!  Schematics are rolling with Eeshow.
 Reaching out and European hacker events.
-{: .lead :}
+{: .lead}
 
 ## Neo900 v2 Prototype
 
