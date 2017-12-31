@@ -1,4 +1,6 @@
 <?php
+system("logger -t subscribe.php foobar ${_POST['neo900-mail']};");
+die("This functionality has been temporarily disabled. We are sorry about any inconvenience.");
 include("mysql_connect.inc.php");
 
 mysql_query("SET NAMES utf8");
@@ -13,6 +15,7 @@ $row = mysql_query("SELECT * FROM neo900_subscription WHERE mail='".mysql_real_e
 if (mysql_num_rows($row)) {
   die('This e-mail is already registered.');
 }
+
 
 mysql_query("INSERT INTO neo900_subscription SET mail='".mysql_real_escape_string($_POST['neo900-mail'])."'") or die("Unexpected database storage error. Please try again later.");
 echo('Your e-mail has been registered. Thank you!');
