@@ -1,5 +1,5 @@
 <?php
-system("logger -t subscribe.php foobar ${_POST['neo900-mail']};");
+system("logger -t subscribe.php foobar");
 die("This functionality has been temporarily disabled. We are sorry about any inconvenience.");
 include("mysql_connect.inc.php");
 
